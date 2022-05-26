@@ -1,0 +1,92 @@
+@import 'tokens';
+
+.custom-card-wrapper {
+  border-radius: $border-radius-lg;
+}
+
+.custom-card {
+  background-color: $dark-suface1;
+  display: flex;
+  flex-direction: row;
+}
+
+.po-card-body-content-wrapper {
+  width: 100%;
+  margin: 0 !important;
+}
+
+.po-card-body {
+  background-color: $dark-suface1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.po-card-content img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* X-Small devices (portrait phones, less than 576px) */
+
+@media (max-width: 575.98px) {
+  .custom-card {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .po-card-content img {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .po-card-body-content-wrapper {
+    padding: .5rem !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199.98px) {
+  .po-card-body {
+    height: 500px !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .po-card-body h2 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (min-width: 300px) {
+  .po-card-body-content-wrapper {
+    padding: 1.2rem !important;
+  }
+}
+
+@media (min-width: 576px) {
+  .po-card-body-content-wrapper {
+    padding: 2rem !important;
+  }
+}
+
+@media (min-width: 300px) {
+  .po-card-body .btn {
+    display: block;
+  }
+}
+
+@media (min-width: 576px) {
+  .po-card-body .btn {
+    display: inline-block;
+  }
+}
+
+@media (min-width: 1200px) {
+  .po-card-body {
+    min-height: 500px;
+  }
+}
