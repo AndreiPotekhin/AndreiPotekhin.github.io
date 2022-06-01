@@ -69,19 +69,49 @@
 }
 
 .po-img-wrapper {
+  overflow: hidden;
   margin: 2rem 0;
   position: relative;
   width: 100%;
   padding-top: 56.25%;
+  border-radius: $border-radius;
   /*16: 9 Aspect Ratio;*/
+
+  img {
+    object-fit: cover;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    border-radius: $border-radius;
+  }
 }
 
-.post-content .po-img-wrapper img {
-  position: absolute;
+.po-image-gallery-full-width {
+
+  
+}
+
+.po-image-gallery-col {
+
+}
+
+.po-img-wrapper-long {
+  margin: 2rem 0;
+  position: relative;
   width: 100%;
-  left: 0;
-  top: 0;
-  border-radius: $border-radius;
+  display: flex;
+  justify-content: center;
+  max-height: 2000px;
+  
+  img {
+    object-position: 0 0;
+    object-fit: cover;
+    width: 100%;
+    left: 0;
+    top: 0;
+    border-radius: $border-radius;
+  }
 }
 
 .post-content .po-yt-embed-wrapper {

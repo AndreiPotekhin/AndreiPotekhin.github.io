@@ -81,15 +81,34 @@
 }
 
 .po-img-wrapper {
+  overflow: hidden;
   margin: 2rem 0;
   position: relative;
   width: 100%;
   padding-top: 56.25%;
+  border-radius: 1.5rem;
   /*16: 9 Aspect Ratio;*/
 }
-
-.post-content .po-img-wrapper img {
+.po-img-wrapper img {
+  object-fit: cover;
   position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+  border-radius: 1.5rem;
+}
+
+.po-img-wrapper-long {
+  margin: 2rem 0;
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  max-height: 2000px;
+}
+.po-img-wrapper-long img {
+  object-position: 0 0;
+  object-fit: cover;
   width: 100%;
   left: 0;
   top: 0;
