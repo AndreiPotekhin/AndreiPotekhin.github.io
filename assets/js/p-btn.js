@@ -1,4 +1,4 @@
-import anime from '../../node_modules/animejs/lib/anime.es.js';
+import anime from '../../animejs/lib/anime.es.js';
 
 let btnShape = document.querySelectorAll('.btn-shape')
 
