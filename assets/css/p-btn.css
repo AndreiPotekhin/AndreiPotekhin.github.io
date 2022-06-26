@@ -1,0 +1,30 @@
+.btn-wrapper-outer {
+    display: grid;
+    place-items: center;
+    padding: 20px 0;
+}
+
+.btn-wrapper-inner {
+    display: grid;
+    place-items: center;
+    min-width: 100px;
+    height: 50px;
+    position: relative;
+    cursor: none;
+    background-color: transparent;
+    border-color: transparent;
+    text-decoration: none !important;
+}
+
+.btn-shape {
+    height: 220%;
+    overflow: visible;
+    position: absolute;
+}
+
+.btn-text {
+    font-size: 1.5rem;
+    font-weight: 700;
+    z-index: 5;
+    color: #000;
+}

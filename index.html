@@ -21,19 +21,39 @@
     <link rel="stylesheet" href="assets/css/styles.compiled.css">
     <link rel="stylesheet" href="assets/css/tokens.compiled.css">
     <link rel="stylesheet" href="assets/css/variables.compiled.css">
-<script src="https://cdn.jsdelivr.net/npm/contentful@latest/dist/contentful.browser.min.js"></script>
-
-<script>var exports = {}; // quick fix because 'exports' is not defined in rich-text bundle below</script>
-
-<script src="https://unpkg.com/@contentful/rich-text-html-renderer@12.0.0/dist/rich-text-html-renderer.es5.js" charset="utf-8"></script>
-
-<script type="module" src="https://cdn.jsdelivr.net/npm/@contentful/rich-text-types@15.12.1/dist/index.min.js"></script>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+    <link rel="stylesheet" href="assets/css/p-btn.css">
+    <link rel="stylesheet" href="assets/css/p-cursor.css">
+    <script src="https://cdn.jsdelivr.net/npm/contentful@latest/dist/contentful.browser.min.js"></script>
+    <script>var exports = {}; // quick fix because 'exports' is not defined in rich-text bundle below</script>
+    <script src="https://unpkg.com/@contentful/rich-text-html-renderer@12.0.0/dist/rich-text-html-renderer.es5.js" charset="utf-8"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@contentful/rich-text-types@15.12.1/dist/index.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.12.0/paper-core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/simplex-noise/2.4.0/simplex-noise.min.js"></script>
 </head>
 
 <body>
-    <nav class="navbar navbar-light navbar-expand-md py-3" style="color: var(--dark-on-surface) !important;">
+    <main>
+
+        <div class="cursor cursor--small"></div>
+        <canvas class="cursor cursor--canvas" resize></canvas>
+
+<!--        <button type="button" class="btn-wrapper">-->
+<!--            <div class="btn-text">View Case Study</div>-->
+<!--            <svg class="btn-shape" fill-rule="nonzero" viewBox="0 0 353 158" fill="none" xmlns="http://www.w3.org/2000/svg">-->
+<!--                <path class="line" d="M77.0674 11.1947L33.5391 146.616" stroke="#4ED8E7" stroke-width="70"/>-->
+<!--                <path class="line" d="M99.2891 124.562C112.327 96.9958 137.51 34.9335 133.934 7.21777" stroke="#4ED8E7" stroke-width="70"/>-->
+<!--                <path class="line" d="M30.6875 118.215C71.2924 98.0986 157.42 58.3131 177.089 60.1013" stroke="#4ED8E7" stroke-width="70"/>-->
+<!--                <path class="line" d="M130.709 56.7983C162.746 54.1906 229.949 56.3513 242.466 85.8551" stroke="#4ED8E7" stroke-width="70"/>-->
+<!--                <path class="line" d="M103.888 112.341C135.179 115.321 206.703 115.694 242.466 93.3423" stroke="#4ED8E7" stroke-width="70"/>-->
+<!--                <path class="line" d="M216.205 75.9482C251.222 74.4582 325.056 70.3604 340.255 65.8901" stroke="#4ED8E7" stroke-width="70"/>-->
+<!--                <path class="line" d="M269.512 17.9236C271.747 31.3344 274.876 64.6379 269.512 90.5656" stroke="#4ED8E7" stroke-width="70"/>-->
+<!--                <path class="line" d="M194.075 103.566C239.151 86.0575 332.43 51.7108 344.947 54.393" stroke="#4ED8E7" stroke-width="70"/>-->
+<!--                <path class="line" d="M294.605 119.533C257.726 116.926 171.45 102.546 121.383 65.8901" stroke="#4ED8E7" stroke-width="70"/>-->
+<!--            </svg>-->
+<!--        </button>-->
+
+        <nav class="navbar navbar-light navbar-expand-md py-3" style="color: var(--dark-on-surface) !important;">
         <div class="container"><a class="navbar-brand d-flex align-items-center" href="index.html"><span style="color: var(--dark-on-surface);">Andrei Potekhin</span></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-2"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse justify-content-between" id="navcol-2">
                 <ul class="navbar-nav me-auto">
@@ -43,7 +63,7 @@
             </div>
         </div>
     </nav>
-    <div class="container py-4 py-xl-5 hero-section">
+        <div class="container py-4 py-xl-5 hero-section">
         <div class="row gy-4 gy-md-0">
             <div class="col-md-6 col-lg-8">
                 <div class="d-xl-flex justify-content-xl-center align-items-xl-center"><img class="rounded img-fluid" id="hero-image" src="assets/img/hero-img.png"></div>
@@ -56,7 +76,7 @@
             </div>
         </div>
     </div>
-    <section class="py-4 py-xl-5 basic-section">
+        <section class="py-4 py-xl-5 basic-section">
         <div class="container">
             <div class="overflow-hidden custom-card-wrapper">
                 <div class="row g-0 custom-card">
@@ -69,7 +89,22 @@
                             </ul>
                             <h2 style="padding-top: .5rem;padding-bottom: .5rem;">Crafting a simple brand identity system for a mobile app</h2>
                             <p class="mb-4">Exploring the power of reusable identity components and simplifying assets creation with a pattern generator</p>
-                            <div class="my-3"><a class="btn btn-primary btn-lg me-2" role="button" href="crafting-a-simple-brand-identity-system-for-a-mobile-app.html">View Case Study</a></div>
+                            <div class="mt-5 btn-wrapper-outer">
+                                <a role="button" class="btn-wrapper-inner" href="crafting-a-simple-brand-identity-system-for-a-mobile-app.html">
+                                    <div class="btn-text">View Case Study</div>
+                                    <svg class="btn-shape" fill-rule="nonzero" viewBox="0 0 353 158" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path class="line" d="M77.0674 11.1947L33.5391 146.616" stroke="#4ED8E7" stroke-width="70"/>
+                                        <path class="line" d="M99.2891 124.562C112.327 96.9958 137.51 34.9335 133.934 7.21777" stroke="#4ED8E7" stroke-width="70"/>
+                                        <path class="line" d="M30.6875 118.215C71.2924 98.0986 157.42 58.3131 177.089 60.1013" stroke="#4ED8E7" stroke-width="70"/>
+                                        <path class="line" d="M130.709 56.7983C162.746 54.1906 229.949 56.3513 242.466 85.8551" stroke="#4ED8E7" stroke-width="70"/>
+                                        <path class="line" d="M103.888 112.341C135.179 115.321 206.703 115.694 242.466 93.3423" stroke="#4ED8E7" stroke-width="70"/>
+                                        <path class="line" d="M216.205 75.9482C251.222 74.4582 325.056 70.3604 340.255 65.8901" stroke="#4ED8E7" stroke-width="70"/>
+                                        <path class="line" d="M269.512 17.9236C271.747 31.3344 274.876 64.6379 269.512 90.5656" stroke="#4ED8E7" stroke-width="70"/>
+                                        <path class="line" d="M194.075 103.566C239.151 86.0575 332.43 51.7108 344.947 54.393" stroke="#4ED8E7" stroke-width="70"/>
+                                        <path class="line" d="M294.605 119.533C257.726 116.926 171.45 102.546 121.383 65.8901" stroke="#4ED8E7" stroke-width="70"/>
+                                    </svg>
+                                </a>
+                            </div>
                         </div>
                     </div>
                     <div class="col-md-6 order-first order-md-first po-card-content"><img src="assets/img/case-study-one/case-study-one-cover.png"></div>
@@ -89,7 +124,22 @@
                                 </ul>
                                 <h2 style="padding-top: .5rem;padding-bottom: .5rem;">Making a Webflow Site Flourish With Assets and Code</h2>
                                 <p class="mb-4">Preparing images and copywriting, developing the site in Webflow, and extending its functionality with custom code</p>
-                                <div class="my-3"><a class="btn btn-primary btn-lg me-2" role="button" href="making-a-webflow-site-flourish-with-assets-and-code.html">View Case Study</a></div>
+                                <div class="mt-5 btn-wrapper-outer">
+                                    <a role="button" class="btn-wrapper-inner" href="making-a-webflow-site-flourish-with-assets-and-code.html">
+                                        <div class="btn-text">View Case Study</div>
+                                        <svg class="btn-shape" fill-rule="nonzero" viewBox="0 0 353 158" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path class="line" d="M77.0674 11.1947L33.5391 146.616" stroke="#4ED8E7" stroke-width="70"/>
+                                            <path class="line" d="M99.2891 124.562C112.327 96.9958 137.51 34.9335 133.934 7.21777" stroke="#4ED8E7" stroke-width="70"/>
+                                            <path class="line" d="M30.6875 118.215C71.2924 98.0986 157.42 58.3131 177.089 60.1013" stroke="#4ED8E7" stroke-width="70"/>
+                                            <path class="line" d="M130.709 56.7983C162.746 54.1906 229.949 56.3513 242.466 85.8551" stroke="#4ED8E7" stroke-width="70"/>
+                                            <path class="line" d="M103.888 112.341C135.179 115.321 206.703 115.694 242.466 93.3423" stroke="#4ED8E7" stroke-width="70"/>
+                                            <path class="line" d="M216.205 75.9482C251.222 74.4582 325.056 70.3604 340.255 65.8901" stroke="#4ED8E7" stroke-width="70"/>
+                                            <path class="line" d="M269.512 17.9236C271.747 31.3344 274.876 64.6379 269.512 90.5656" stroke="#4ED8E7" stroke-width="70"/>
+                                            <path class="line" d="M194.075 103.566C239.151 86.0575 332.43 51.7108 344.947 54.393" stroke="#4ED8E7" stroke-width="70"/>
+                                            <path class="line" d="M294.605 119.533C257.726 116.926 171.45 102.546 121.383 65.8901" stroke="#4ED8E7" stroke-width="70"/>
+                                        </svg>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                         <div class="col-md-6 order-first order-md-first po-card-content"><img src="assets/img/case-study-two/cover.png"></div>
@@ -98,7 +148,7 @@
             </div>
         </section>
     </section>
-    <section class="cta-section basic-section">
+        <section class="cta-section basic-section">
         <div class="container">
             <div class="row">
                 <div class="col content-wrapper">
@@ -108,7 +158,7 @@
             </div>
         </div>
     </section>
-    <section style="padding-top: 2rem;padding-bottom: 2rem;">
+        <section style="padding-top: 2rem;padding-bottom: 2rem;">
         <div class="container">
             <div class="row">
                 <div class="col d-flex justify-content-between">
@@ -118,9 +168,14 @@
             </div>
         </div>
     </section>
+
+    </main>
+
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/cms-config.js"></script>
+    <script type="module" src="assets/js/p-btn.js"></script>
+    <script type="module" src="assets/js/p-cursor.js"></script>
 </body>
 
 </html>

@@ -16,10 +16,14 @@
   border-radius: 1.5rem !important;
 }
 
+body {
+  cursor: none;
+}
+
 .po-body {
   background-color: #191C1D;
   color: #BFC8CA;
-  --bs-primary: $dark-primary !important;
+  /*--bs-primary: $dark-primary !important;*/
   --bs-primary-rgb: 129,243,255;
 }
 
