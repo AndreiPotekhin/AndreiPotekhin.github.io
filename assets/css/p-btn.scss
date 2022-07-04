@@ -1,0 +1,80 @@
+@import "tokens";
+
+.btn-wrapper-outer {
+  padding: 20px;
+}
+
+.btn-wrapper-inner {
+  height: 50px;
+  min-width: 100px;
+  display: grid;
+  place-items: center;
+  position: relative;
+  cursor: none;
+  background-color: transparent;
+  border-color: transparent;
+  text-decoration: none !important;
+}
+
+.btn-shape {
+  height: 220%;
+  overflow: visible;
+  position: absolute;
+}
+
+.btn-shape .line {
+  stroke: $sys-dark-primary;
+  stroke-width: 70;
+}
+
+.btn-text {
+  font-size: 1.5rem;
+  font-weight: 700;
+  z-index: 5;
+  color: $sys-dark-on-primary;
+}
+
+.text-btn {
+  color: $sys-dark-primary;
+  text-decoration: none !important;
+  cursor: none;
+  position: relative;
+}
+
+.text-btn-text {
+  z-index: 8 !important;
+}
+
+.text-btn-icon {
+  width: 100%;
+  height: 100px;
+  left: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+  position: absolute;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+
+  .text-btn-icon-shape {
+    margin-right: -50px;
+    z-index: 2 !important;
+    transform: scale(0);
+  }
+
+  svg {
+    width: 100px;
+    float: right;
+
+    path {
+      stroke-width: 15;
+      stroke: $sys-dark-primary;
+    }
+  }
+}
+
+button:focus {
+  outline: 1px dotted;
+  outline: 5px auto $sys-dark-primary;
+}
+

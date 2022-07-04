@@ -1,7 +1,7 @@
 let outerR = 25;
-let outerShapeStroke = "#4ED8E7";
+let outerShapeStroke = '#4ED8E7';
 let outerShapeFill = 'transparent';
-let outerShapeWidth = 1;
+let outerShapeWidth = 2;
 
 // Smaller cursor
 

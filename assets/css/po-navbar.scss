@@ -1,16 +1,4 @@
-:root {
-  --dark-primary: #4ED8E7 !important;
-  --dark-on-primary: #00363C !important;
-  --dark-background: #1C1C16 !important;
-  --dark-sudface: #191C1D !important;
-  --dark-suface1: #1C2527 !important;
-  --dark-surface2: #1D2B2D !important;
-  --dark-surface3: #1F3133 !important;
-  --dark-surface4: #1F3335 !important;
-  --dark-surface5: #203639 !important;
-  --dark-on-surface: #BFC8CA !important;
-  --dark-outline: #BFC8CA !important;
-}
+@import "tokens";
 
 .bs-icon {
   --bs-icon-size: .75rem;
@@ -38,9 +26,10 @@
 }
 
 .navbar {
-  background-color: rgb(0, 79, 87) !important;
+  //background-color: $read-only-dark-surface-opacity-0-08;
+  background-color: $sys-dark-primary-container !important;
   border-radius: 0 !important;
-  color: rgb(224, 227, 227) !important;
+  color: $sys-dark-on-surface !important;
   z-index: 8;
   position: absolute;
 }
@@ -55,12 +44,13 @@
     margin: 0 !important;
     top: 0;
     right: 0;
+    //transition: width 5s, height 10s,  linear;
   }
-
   .navbar-brand {
     display: none !important;
   }
 }
+
 @media (min-width: 768px) and (max-width: 991.98px) {
   .navbar {
     width: 80%;
@@ -70,6 +60,7 @@
     transform: translate(-50%, 0);
   }
 }
+
 @media (min-width: 992px) {
   .navbar {
     width: 50%;
@@ -79,5 +70,3 @@
     transform: translate(-50%, 0);
   }
 }
-
-/*# sourceMappingURL=po-navbar.css.map */

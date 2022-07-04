@@ -1,0 +1,130 @@
+:root {
+  --dark-primary: #4ED8E7 !important;
+  --dark-on-primary: #00363C !important;
+  --dark-background: #1C1C16 !important;
+  --dark-sudface: #191C1D !important;
+  --dark-suface1: #1C2527 !important;
+  --dark-surface2: #1D2B2D !important;
+  --dark-surface3: #1F3133 !important;
+  --dark-surface4: #1F3335 !important;
+  --dark-surface5: #203639 !important;
+  --dark-on-surface: #BFC8CA !important;
+  --dark-outline: #BFC8CA !important;
+}
+
+section {
+  margin: 0;
+  padding: 0;
+}
+
+.hero-section-2 {
+  display: grid;
+  align-items: center;
+  position: relative;
+  background-color: rgb(0, 79, 87);
+}
+
+.hero-desc {
+  z-index: 7;
+}
+.hero-desc .hero-heading {
+  color: rgb(0, 79, 87);
+}
+.hero-desc .hero-text {
+  color: rgb(0, 79, 87);
+}
+
+body {
+  font-family: sans-serif;
+}
+
+.hero-image-wrapper {
+  position: absolute;
+  bottom: 0;
+  z-index: 6;
+}
+.hero-image-wrapper img {
+  width: 100%;
+}
+
+.shape-wrapper {
+  position: absolute;
+  bottom: 0;
+}
+.shape-wrapper .line {
+  stroke: rgb(129, 243, 255);
+  stroke-width: 10;
+  z-index: 5;
+}
+
+.hero-shape {
+  height: 600px;
+  overflow: visible;
+}
+
+/* CTA SECTION */
+@media (max-width: 575.98px) {
+  .hero-section-2 {
+    height: 100vh;
+  }
+
+  .hero-desc {
+    transform: translate(0, -50%);
+  }
+
+  .hero-shape {
+    width: 100%;
+  }
+
+  .basic-section {
+    padding: 48px 0;
+  }
+
+  .cta-section {
+    padding: 48px 0 24px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .hero-section-2 {
+    height: 100vh;
+  }
+
+  .hero-desc {
+    transform: translate(0, -75%);
+  }
+
+  .hero-shape {
+    width: 100%;
+  }
+
+  .basic-section {
+    padding: 96px 0;
+  }
+
+  .cta-section {
+    padding: 192px 0 96px;
+  }
+}
+@media (min-width: 992px) {
+  .hero-section-2 {
+    height: 102vh;
+  }
+
+  .hero-desc {
+    transform: translate(0, -75%);
+  }
+
+  .hero-shape {
+    width: 600px;
+  }
+
+  .basic-section {
+    padding: 96px 0;
+  }
+
+  .cta-section {
+    padding: 256px 0 96px;
+  }
+}
+
+/*# sourceMappingURL=po-sections.css.map */

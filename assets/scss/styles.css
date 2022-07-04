@@ -1,16 +1,28 @@
-@import 'tokens';
+:root {
+  --dark-primary: #4ED8E7 !important;
+  --dark-on-primary: #00363C !important;
+  --dark-background: #1C1C16 !important;
+  --dark-sudface: #191C1D !important;
+  --dark-suface1: #1C2527 !important;
+  --dark-surface2: #1D2B2D !important;
+  --dark-surface3: #1F3133 !important;
+  --dark-surface4: #1F3335 !important;
+  --dark-surface5: #203639 !important;
+  --dark-on-surface: #BFC8CA !important;
+  --dark-outline: #BFC8CA !important;
+}
 
 body {
   overflow-x: hidden;
 }
 
 .img {
-  border-radius: $border-radius !important;
+  border-radius: 1.5rem !important;
 }
 
 .po-body {
-  background-color: $dark-sudface;
-  color: $dark-on-surface;
+  background-color: #191C1D;
+  color: #BFC8CA;
   --bs-primary: $dark-primary !important;
   --bs-primary-rgb: 129,243,255;
 }
@@ -37,18 +49,16 @@ body {
     font-size: 12px;
   }
 }
-
 @media (max-width: 767.98px) {
   .tag-list {
     font-size: 14px;
   }
 }
-
 #hero-image {
   height: 500px;
   width: 500px;
   object-fit: cover;
-  border-radius: $border-radius-lg !important;
+  border-radius: 4rem !important;
 }
 
 @media (max-width: 991.98px) {
@@ -56,9 +66,10 @@ body {
     max-height: 400px;
   }
 }
-
 @media (max-width: 767.98px) {
   #hero-image {
     max-height: 400px;
   }
 }
+
+/*# sourceMappingURL=styles.css.map */

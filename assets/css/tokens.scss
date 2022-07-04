@@ -1,0 +1,637 @@
+:root {
+  --dark-primary: #4ED8E7 !important;
+  --dark-on-primary: #00363C !important;
+  --dark-background: #1C1C16 !important;
+  --dark-sudface: #191C1D !important;
+  --dark-suface1: #1C2527 !important;
+  --dark-surface2: #1D2B2D !important;
+  --dark-surface3: #1F3133 !important;
+  --dark-surface4: #1F3335 !important;
+  --dark-surface5: #203639 !important;
+  --dark-on-surface: #BFC8CA !important;
+  --dark-outline: #BFC8CA !important;
+}
+
+$sys-light-primary: rgba(0,105,115,1);
+$sys-light-on-primary: rgba(255,255,255,1);
+$sys-light-primary-container: rgba(129,243,255,1);
+$sys-light-on-primary-container: rgba(0,31,35,1);
+$sys-light-secondary: rgba(74,99,102,1);
+$sys-light-on-secondary: rgba(255,255,255,1);
+$sys-light-secondary-container: rgba(205,231,235,1);
+$sys-light-on-secondary-container: rgba(4,31,34,1);
+$sys-light-tertiary: rgba(81,94,125,1);
+$sys-light-on-tertiary: rgba(255,255,255,1);
+$sys-light-tertiary-container: rgba(215,226,255,1);
+$sys-light-on-tertiary-container: rgba(12,27,54,1);
+$sys-light-error: rgba(186,27,27,1);
+$sys-light-error-container: rgba(255,218,212,1);
+$sys-light-on-error: rgba(255,255,255,1);
+$sys-light-on-error-container: rgba(65,0,1,1);
+$sys-light-background: rgba(251,253,253,1);
+$sys-light-on-background: rgba(25,28,29,1);
+$sys-light-surface: rgba(251,253,253,1);
+$sys-light-on-surface: rgba(25,28,29,1);
+$sys-light-surface-variant: rgba(218,228,229,1);
+$sys-light-on-surface-variant: rgba(63,73,74,1);
+$sys-light-outline: rgba(111,121,122,1);
+$sys-light-inverse-on-surface: rgba(239,241,241,1);
+$sys-light-inverse-surface: rgba(46,49,49,1);
+$sys-light-inverse-primary: rgba(78,216,231,1);
+$sys-light-shadow: rgba(0,0,0,1);
+$sys-dark-primary: rgba(78,216,231,1);
+$sys-dark-on-primary: rgba(0,54,60,1);
+$sys-dark-primary-container: rgba(0,79,87,1);
+$sys-dark-on-primary-container: rgba(129,243,255,1);
+$sys-dark-secondary: rgba(177,203,207,1);
+$sys-dark-on-secondary: rgba(28,52,55,1);
+$sys-dark-secondary-container: rgba(51,75,78,1);
+$sys-dark-on-secondary-container: rgba(205,231,235,1);
+$sys-dark-tertiary: rgba(184,198,234,1);
+$sys-dark-on-tertiary: rgba(34,48,77,1);
+$sys-dark-tertiary-container: rgba(57,70,100,1);
+$sys-dark-on-tertiary-container: rgba(215,226,255,1);
+$sys-dark-error: rgba(255,180,169,1);
+$sys-dark-error-container: rgba(147,0,6,1);
+$sys-dark-on-error: rgba(104,0,3,1);
+$sys-dark-on-error-container: rgba(255,218,212,1);
+$sys-dark-background: rgba(25,28,29,1);
+$sys-dark-on-background: rgba(224,227,227,1);
+$sys-dark-surface: rgba(25,28,29,1);
+$sys-dark-on-surface: rgba(224,227,227,1);
+$sys-dark-surface-variant: rgba(63,73,74,1);
+$sys-dark-on-surface-variant: rgba(191,200,202,1);
+$sys-dark-outline: rgba(137,147,148,1);
+$sys-dark-inverse-on-surface: rgba(25,28,29,1);
+$sys-dark-inverse-surface: rgba(224,227,227,1);
+$sys-dark-inverse-primary: rgba(0,105,115,1);
+$sys-dark-shadow: rgba(0,0,0,1);
+$ref-primary-primary-100: rgba(255,255,255,1);
+$ref-primary-primary-99: rgba(242,254,255,1);
+$ref-primary-primary-95: rgba(200,249,255,1);
+$ref-primary-primary-90: rgba(129,243,255,1);
+$ref-primary-primary-80: rgba(78,216,231,1);
+$ref-primary-primary-70: rgba(32,188,203,1);
+$ref-primary-primary-60: rgba(0,160,174,1);
+$ref-primary-primary-50: rgba(0,132,144,1);
+$ref-primary-primary-40: rgba(0,105,115,1);
+$ref-primary-primary-30: rgba(0,79,87,1);
+$ref-primary-primary-20: rgba(0,54,60,1);
+$ref-primary-primary-10: rgba(0,31,35,1);
+$ref-primary-primary-0: rgba(0,0,0,1);
+$ref-secondary-secondary-100: rgba(255,255,255,1);
+$ref-secondary-secondary-99: rgba(242,254,255,1);
+$ref-secondary-secondary-95: rgba(219,246,250,1);
+$ref-secondary-secondary-90: rgba(205,231,235,1);
+$ref-secondary-secondary-80: rgba(177,203,207,1);
+$ref-secondary-secondary-70: rgba(150,176,179,1);
+$ref-secondary-secondary-60: rgba(123,149,152,1);
+$ref-secondary-secondary-50: rgba(98,124,127,1);
+$ref-secondary-secondary-40: rgba(74,99,102,1);
+$ref-secondary-secondary-30: rgba(51,75,78,1);
+$ref-secondary-secondary-20: rgba(28,52,55,1);
+$ref-secondary-secondary-10: rgba(4,31,34,1);
+$ref-secondary-secondary-0: rgba(0,0,0,1);
+$ref-tertiary-tertiary-100: rgba(255,255,255,1);
+$ref-tertiary-tertiary-99: rgba(253,251,255,1);
+$ref-tertiary-tertiary-95: rgba(236,240,255,1);
+$ref-tertiary-tertiary-90: rgba(215,226,255,1);
+$ref-tertiary-tertiary-80: rgba(184,198,234,1);
+$ref-tertiary-tertiary-70: rgba(157,171,206,1);
+$ref-tertiary-tertiary-60: rgba(131,145,178,1);
+$ref-tertiary-tertiary-50: rgba(105,119,151,1);
+$ref-tertiary-tertiary-40: rgba(81,94,125,1);
+$ref-tertiary-tertiary-30: rgba(57,70,100,1);
+$ref-tertiary-tertiary-20: rgba(34,48,77,1);
+$ref-tertiary-tertiary-10: rgba(12,27,54,1);
+$ref-tertiary-tertiary-0: rgba(0,0,0,1);
+$ref-neutral-neutral-100: rgba(255,255,255,1);
+$ref-neutral-neutral-99: rgba(251,253,253,1);
+$ref-neutral-neutral-95: rgba(239,241,241,1);
+$ref-neutral-neutral-90: rgba(224,227,227,1);
+$ref-neutral-neutral-80: rgba(196,199,199,1);
+$ref-neutral-neutral-70: rgba(169,172,172,1);
+$ref-neutral-neutral-60: rgba(142,145,145,1);
+$ref-neutral-neutral-50: rgba(116,120,120,1);
+$ref-neutral-neutral-40: rgba(92,95,95,1);
+$ref-neutral-neutral-30: rgba(68,71,71,1);
+$ref-neutral-neutral-20: rgba(46,49,49,1);
+$ref-neutral-neutral-10: rgba(25,28,29,1);
+$ref-neutral-neutral-0: rgba(0,0,0,1);
+$ref-neutral-variant-neutral-variant-100: rgba(255,255,255,1);
+$ref-neutral-variant-neutral-variant-99: rgba(245,254,255,1);
+$ref-neutral-variant-neutral-variant-95: rgba(233,243,244,1);
+$ref-neutral-variant-neutral-variant-90: rgba(218,228,229,1);
+$ref-neutral-variant-neutral-variant-80: rgba(191,200,202,1);
+$ref-neutral-variant-neutral-variant-70: rgba(163,173,174,1);
+$ref-neutral-variant-neutral-variant-60: rgba(137,147,148,1);
+$ref-neutral-variant-neutral-variant-50: rgba(111,121,122,1);
+$ref-neutral-variant-neutral-variant-40: rgba(87,96,97,1);
+$ref-neutral-variant-neutral-variant-30: rgba(63,73,74,1);
+$ref-neutral-variant-neutral-variant-20: rgba(41,50,51,1);
+$ref-neutral-variant-neutral-variant-10: rgba(20,29,30,1);
+$ref-neutral-variant-neutral-variant-0: rgba(0,0,0,1);
+$ref-error-error-100: rgba(255,255,255,1);
+$ref-error-error-99: rgba(252,252,252,1);
+$ref-error-error-95: rgba(255,237,233,1);
+$ref-error-error-90: rgba(255,218,212,1);
+$ref-error-error-80: rgba(255,180,169,1);
+$ref-error-error-70: rgba(255,137,122,1);
+$ref-error-error-60: rgba(255,84,73,1);
+$ref-error-error-50: rgba(221,55,48,1);
+$ref-error-error-40: rgba(186,27,27,1);
+$ref-error-error-30: rgba(147,0,6,1);
+$ref-error-error-20: rgba(104,0,3,1);
+$ref-error-error-10: rgba(65,0,1,1);
+$ref-error-error-0: rgba(0,0,0,1);
+$source-seed: rgba(0,105,114,1);
+$source-primary: rgba(0,105,115,1);
+$source-secondary: rgba(74,99,102,1);
+$source-tertiary: rgba(81,94,125,1);
+$source-neutral: rgba(92,95,95,1);
+$source-neutral-variant: rgba(87,96,97,1);
+$source-error: rgba(186,27,27,1);
+$read-only-light-surface-1: rgba(0,105,115,0.050);
+$read-only-light-surface-2: rgba(0,105,115,0.080);
+$read-only-light-surface-3: rgba(0,105,115,0.110);
+$read-only-light-surface-4: rgba(0,105,115,0.120);
+$read-only-light-surface-5: rgba(0,105,115,0.140);
+$read-only-light-black: rgba(0,0,0,1);
+$read-only-light-white: rgba(255,255,255,1);
+$read-only-light-primary-opacity-0-08: rgba(0,105,115,0.080);
+$read-only-light-primary-opacity-0-12: rgba(0,105,115,0.120);
+$read-only-light-primary-opacity-0-16: rgba(0,105,115,0.160);
+$read-only-light-on-primary-opacity-0-08: rgba(255,255,255,0.080);
+$read-only-light-on-primary-opacity-0-12: rgba(255,255,255,0.120);
+$read-only-light-on-primary-opacity-0-16: rgba(255,255,255,0.160);
+$read-only-light-primary-container-opacity-0-08: rgba(129,243,255,0.080);
+$read-only-light-primary-container-opacity-0-12: rgba(129,243,255,0.120);
+$read-only-light-primary-container-opacity-0-16: rgba(129,243,255,0.160);
+$read-only-light-on-primary-container-opacity-0-08: rgba(0,31,35,0.080);
+$read-only-light-on-primary-container-opacity-0-12: rgba(0,31,35,0.120);
+$read-only-light-on-primary-container-opacity-0-16: rgba(0,31,35,0.160);
+$read-only-light-secondary-opacity-0-08: rgba(74,99,102,0.080);
+$read-only-light-secondary-opacity-0-12: rgba(74,99,102,0.120);
+$read-only-light-secondary-opacity-0-16: rgba(74,99,102,0.160);
+$read-only-light-on-secondary-opacity-0-08: rgba(255,255,255,0.080);
+$read-only-light-on-secondary-opacity-0-12: rgba(255,255,255,0.120);
+$read-only-light-on-secondary-opacity-0-16: rgba(255,255,255,0.160);
+$read-only-light-secondary-container-opacity-0-08: rgba(205,231,235,0.080);
+$read-only-light-secondary-container-opacity-0-12: rgba(205,231,235,0.120);
+$read-only-light-secondary-container-opacity-0-16: rgba(205,231,235,0.160);
+$read-only-light-on-secondary-container-opacity-0-08: rgba(4,31,34,0.080);
+$read-only-light-on-secondary-container-opacity-0-12: rgba(4,31,34,0.120);
+$read-only-light-on-secondary-container-opacity-0-16: rgba(4,31,34,0.160);
+$read-only-light-tertiary-opacity-0-08: rgba(81,94,125,0.080);
+$read-only-light-tertiary-opacity-0-12: rgba(81,94,125,0.120);
+$read-only-light-tertiary-opacity-0-16: rgba(81,94,125,0.160);
+$read-only-light-on-tertiary-opacity-0-08: rgba(255,255,255,0.080);
+$read-only-light-on-tertiary-opacity-0-12: rgba(255,255,255,0.120);
+$read-only-light-on-tertiary-opacity-0-16: rgba(255,255,255,0.160);
+$read-only-light-tertiary-container-opacity-0-08: rgba(215,226,255,0.080);
+$read-only-light-tertiary-container-opacity-0-12: rgba(215,226,255,0.120);
+$read-only-light-tertiary-container-opacity-0-16: rgba(215,226,255,0.160);
+$read-only-light-on-tertiary-container-opacity-0-08: rgba(12,27,54,0.080);
+$read-only-light-on-tertiary-container-opacity-0-12: rgba(12,27,54,0.120);
+$read-only-light-on-tertiary-container-opacity-0-16: rgba(12,27,54,0.160);
+$read-only-light-error-opacity-0-08: rgba(186,27,27,0.080);
+$read-only-light-error-opacity-0-12: rgba(186,27,27,0.120);
+$read-only-light-error-opacity-0-16: rgba(186,27,27,0.160);
+$read-only-light-error-container-opacity-0-08: rgba(255,218,212,0.080);
+$read-only-light-error-container-opacity-0-12: rgba(255,218,212,0.120);
+$read-only-light-error-container-opacity-0-16: rgba(255,218,212,0.160);
+$read-only-light-on-error-opacity-0-08: rgba(255,255,255,0.080);
+$read-only-light-on-error-opacity-0-12: rgba(255,255,255,0.120);
+$read-only-light-on-error-opacity-0-16: rgba(255,255,255,0.160);
+$read-only-light-on-error-container-opacity-0-08: rgba(65,0,1,0.080);
+$read-only-light-on-error-container-opacity-0-12: rgba(65,0,1,0.120);
+$read-only-light-on-error-container-opacity-0-16: rgba(65,0,1,0.160);
+$read-only-light-background-opacity-0-08: rgba(251,253,253,0.080);
+$read-only-light-background-opacity-0-12: rgba(251,253,253,0.120);
+$read-only-light-background-opacity-0-16: rgba(251,253,253,0.160);
+$read-only-light-on-background-opacity-0-08: rgba(25,28,29,0.080);
+$read-only-light-on-background-opacity-0-12: rgba(25,28,29,0.120);
+$read-only-light-on-background-opacity-0-16: rgba(25,28,29,0.160);
+$read-only-light-surface-opacity-0-08: rgba(251,253,253,0.080);
+$read-only-light-surface-opacity-0-12: rgba(251,253,253,0.120);
+$read-only-light-surface-opacity-0-16: rgba(251,253,253,0.160);
+$read-only-light-on-surface-opacity-0-08: rgba(25,28,29,0.080);
+$read-only-light-on-surface-opacity-0-12: rgba(25,28,29,0.120);
+$read-only-light-on-surface-opacity-0-16: rgba(25,28,29,0.160);
+$read-only-light-surface-variant-opacity-0-08: rgba(218,228,229,0.080);
+$read-only-light-surface-variant-opacity-0-12: rgba(218,228,229,0.120);
+$read-only-light-surface-variant-opacity-0-16: rgba(218,228,229,0.160);
+$read-only-light-on-surface-variant-opacity-0-08: rgba(63,73,74,0.080);
+$read-only-light-on-surface-variant-opacity-0-12: rgba(63,73,74,0.120);
+$read-only-light-on-surface-variant-opacity-0-16: rgba(63,73,74,0.160);
+$read-only-light-outline-opacity-0-08: rgba(111,121,122,0.080);
+$read-only-light-outline-opacity-0-12: rgba(111,121,122,0.120);
+$read-only-light-outline-opacity-0-16: rgba(111,121,122,0.160);
+$read-only-light-inverse-on-surface-opacity-0-08: rgba(239,241,241,0.080);
+$read-only-light-inverse-on-surface-opacity-0-12: rgba(239,241,241,0.120);
+$read-only-light-inverse-on-surface-opacity-0-16: rgba(239,241,241,0.160);
+$read-only-light-inverse-surface-opacity-0-08: rgba(46,49,49,0.080);
+$read-only-light-inverse-surface-opacity-0-12: rgba(46,49,49,0.120);
+$read-only-light-inverse-surface-opacity-0-16: rgba(46,49,49,0.160);
+$read-only-light-inverse-primary-opacity-0-08: rgba(78,216,231,0.080);
+$read-only-light-inverse-primary-opacity-0-12: rgba(78,216,231,0.120);
+$read-only-light-inverse-primary-opacity-0-16: rgba(78,216,231,0.160);
+$read-only-light-shadow-opacity-0-08: rgba(0,0,0,0.080);
+$read-only-light-shadow-opacity-0-12: rgba(0,0,0,0.120);
+$read-only-light-shadow-opacity-0-16: rgba(0,0,0,0.160);
+$read-only-dark-surface-1: rgba(78,216,231,0.050);
+$read-only-dark-surface-2: rgba(78,216,231,0.080);
+$read-only-dark-surface-3: rgba(78,216,231,0.110);
+$read-only-dark-surface-4: rgba(78,216,231,0.120);
+$read-only-dark-surface-5: rgba(78,216,231,0.140);
+$read-only-dark-white: rgba(255,255,255,1);
+$read-only-dark-black: rgba(0,0,0,1);
+$read-only-dark-primary-opacity-0-08: rgba(78,216,231,0.080);
+$read-only-dark-primary-opacity-0-12: rgba(78,216,231,0.120);
+$read-only-dark-primary-opacity-0-16: rgba(78,216,231,0.160);
+$read-only-dark-on-primary-opacity-0-08: rgba(0,54,60,0.080);
+$read-only-dark-on-primary-opacity-0-12: rgba(0,54,60,0.120);
+$read-only-dark-on-primary-opacity-0-16: rgba(0,54,60,0.160);
+$read-only-dark-primary-container-opacity-0-08: rgba(0,79,87,0.080);
+$read-only-dark-primary-container-opacity-0-12: rgba(0,79,87,0.120);
+$read-only-dark-primary-container-opacity-0-16: rgba(0,79,87,0.160);
+$read-only-dark-on-primary-container-opacity-0-08: rgba(129,243,255,0.080);
+$read-only-dark-on-primary-container-opacity-0-12: rgba(129,243,255,0.120);
+$read-only-dark-on-primary-container-opacity-0-16: rgba(129,243,255,0.160);
+$read-only-dark-secondary-opacity-0-08: rgba(177,203,207,0.080);
+$read-only-dark-secondary-opacity-0-12: rgba(177,203,207,0.120);
+$read-only-dark-secondary-opacity-0-16: rgba(177,203,207,0.160);
+$read-only-dark-on-secondary-opacity-0-08: rgba(28,52,55,0.080);
+$read-only-dark-on-secondary-opacity-0-12: rgba(28,52,55,0.120);
+$read-only-dark-on-secondary-opacity-0-16: rgba(28,52,55,0.160);
+$read-only-dark-secondary-container-opacity-0-08: rgba(51,75,78,0.080);
+$read-only-dark-secondary-container-opacity-0-12: rgba(51,75,78,0.120);
+$read-only-dark-secondary-container-opacity-0-16: rgba(51,75,78,0.160);
+$read-only-dark-on-secondary-container-opacity-0-08: rgba(205,231,235,0.080);
+$read-only-dark-on-secondary-container-opacity-0-12: rgba(205,231,235,0.120);
+$read-only-dark-on-secondary-container-opacity-0-16: rgba(205,231,235,0.160);
+$read-only-dark-tertiary-opacity-0-08: rgba(184,198,234,0.080);
+$read-only-dark-tertiary-opacity-0-12: rgba(184,198,234,0.120);
+$read-only-dark-tertiary-opacity-0-16: rgba(184,198,234,0.160);
+$read-only-dark-on-tertiary-opacity-0-08: rgba(34,48,77,0.080);
+$read-only-dark-on-tertiary-opacity-0-12: rgba(34,48,77,0.120);
+$read-only-dark-on-tertiary-opacity-0-16: rgba(34,48,77,0.160);
+$read-only-dark-tertiary-container-opacity-0-08: rgba(57,70,100,0.080);
+$read-only-dark-tertiary-container-opacity-0-12: rgba(57,70,100,0.120);
+$read-only-dark-tertiary-container-opacity-0-16: rgba(57,70,100,0.160);
+$read-only-dark-on-tertiary-container-opacity-0-08: rgba(215,226,255,0.080);
+$read-only-dark-on-tertiary-container-opacity-0-12: rgba(215,226,255,0.120);
+$read-only-dark-on-tertiary-container-opacity-0-16: rgba(215,226,255,0.160);
+$read-only-dark-error-opacity-0-08: rgba(255,180,169,0.080);
+$read-only-dark-error-opacity-0-12: rgba(255,180,169,0.120);
+$read-only-dark-error-opacity-0-16: rgba(255,180,169,0.160);
+$read-only-dark-error-container-opacity-0-08: rgba(147,0,6,0.080);
+$read-only-dark-error-container-opacity-0-12: rgba(147,0,6,0.120);
+$read-only-dark-error-container-opacity-0-16: rgba(147,0,6,0.160);
+$read-only-dark-on-error-opacity-0-08: rgba(104,0,3,0.080);
+$read-only-dark-on-error-opacity-0-12: rgba(104,0,3,0.120);
+$read-only-dark-on-error-opacity-0-16: rgba(104,0,3,0.160);
+$read-only-dark-on-error-container-opacity-0-08: rgba(255,218,212,0.080);
+$read-only-dark-on-error-container-opacity-0-12: rgba(255,218,212,0.120);
+$read-only-dark-on-error-container-opacity-0-16: rgba(255,218,212,0.160);
+$read-only-dark-background-opacity-0-08: rgba(25,28,29,0.080);
+$read-only-dark-background-opacity-0-12: rgba(25,28,29,0.120);
+$read-only-dark-background-opacity-0-16: rgba(25,28,29,0.160);
+$read-only-dark-on-background-opacity-0-08: rgba(224,227,227,0.080);
+$read-only-dark-on-background-opacity-0-12: rgba(224,227,227,0.120);
+$read-only-dark-on-background-opacity-0-16: rgba(224,227,227,0.160);
+$read-only-dark-surface-opacity-0-08: rgba(25,28,29,0.080);
+$read-only-dark-surface-opacity-0-12: rgba(25,28,29,0.120);
+$read-only-dark-surface-opacity-0-16: rgba(25,28,29,0.160);
+$read-only-dark-on-surface-opacity-0-08: rgba(224,227,227,0.080);
+$read-only-dark-on-surface-opacity-0-12: rgba(224,227,227,0.120);
+$read-only-dark-on-surface-opacity-0-16: rgba(224,227,227,0.160);
+$read-only-dark-surface-variant-opacity-0-08: rgba(63,73,74,0.080);
+$read-only-dark-surface-variant-opacity-0-12: rgba(63,73,74,0.120);
+$read-only-dark-surface-variant-opacity-0-16: rgba(63,73,74,0.160);
+$read-only-dark-on-surface-variant-opacity-0-08: rgba(191,200,202,0.080);
+$read-only-dark-on-surface-variant-opacity-0-12: rgba(191,200,202,0.120);
+$read-only-dark-on-surface-variant-opacity-0-16: rgba(191,200,202,0.160);
+$read-only-dark-outline-opacity-0-08: rgba(137,147,148,0.080);
+$read-only-dark-outline-opacity-0-12: rgba(137,147,148,0.120);
+$read-only-dark-outline-opacity-0-16: rgba(137,147,148,0.160);
+$read-only-dark-inverse-on-surface-opacity-0-08: rgba(25,28,29,0.080);
+$read-only-dark-inverse-on-surface-opacity-0-12: rgba(25,28,29,0.120);
+$read-only-dark-inverse-on-surface-opacity-0-16: rgba(25,28,29,0.160);
+$read-only-dark-inverse-surface-opacity-0-08: rgba(224,227,227,0.080);
+$read-only-dark-inverse-surface-opacity-0-12: rgba(224,227,227,0.120);
+$read-only-dark-inverse-surface-opacity-0-16: rgba(224,227,227,0.160);
+$read-only-dark-inverse-primary-opacity-0-08: rgba(0,105,115,0.080);
+$read-only-dark-inverse-primary-opacity-0-12: rgba(0,105,115,0.120);
+$read-only-dark-inverse-primary-opacity-0-16: rgba(0,105,115,0.160);
+$read-only-dark-shadow-opacity-0-08: rgba(0,0,0,0.080);
+$read-only-dark-shadow-opacity-0-12: rgba(0,0,0,0.120);
+$read-only-dark-shadow-opacity-0-16: rgba(0,0,0,0.160);
+
+@mixin display-1 {
+  font-size:64px;
+  font-family:"Montserrat";
+  font-weight:700;
+  font-style:normal;
+  line-height:76px;
+  letter-spacing:-0.5px;
+  text-decoration:none;
+  text-transform:none;
+}
+@mixin display-2 {
+  font-size:57px;
+  font-family:"Montserrat";
+  font-weight:700;
+  font-style:normal;
+  line-height:64px;
+  letter-spacing:-0.25px;
+  text-decoration:none;
+  text-transform:none;
+}
+@mixin display-3 {
+  font-size:45px;
+  font-family:"Montserrat";
+  font-weight:700;
+  font-style:normal;
+  line-height:52px;
+  text-decoration:none;
+  text-transform:none;
+}
+@mixin headline-1 {
+  font-size:36px;
+  font-family:"Montserrat";
+  font-weight:700;
+  font-style:normal;
+  line-height:44px;
+  text-decoration:none;
+  text-transform:none;
+}
+@mixin headline-2 {
+  font-size:32px;
+  font-family:"Montserrat";
+  font-weight:700;
+  font-style:normal;
+  line-height:40px;
+  text-decoration:none;
+  text-transform:none;
+}
+@mixin headline-3 {
+  font-size:28px;
+  font-family:"Montserrat";
+  font-weight:600;
+  font-style:normal;
+  line-height:36px;
+  text-decoration:none;
+  text-transform:none;
+}
+@mixin headline-4 {
+  font-size:24px;
+  font-family:"Montserrat";
+  font-weight:600;
+  font-style:normal;
+  line-height:32px;
+  text-decoration:none;
+  text-transform:none;
+}
+@mixin headline-5 {
+  font-size:22px;
+  font-family:"Montserrat";
+  font-weight:600;
+  font-style:normal;
+  line-height:28px;
+  text-decoration:none;
+  text-transform:none;
+}
+@mixin headline-6 {
+  font-size:18px;
+  font-family:"Montserrat";
+  font-weight:600;
+  font-style:normal;
+  line-height:24px;
+  text-decoration:none;
+  text-transform:none;
+}
+@mixin subhead-1 {
+  font-size:16px;
+  font-family:"Montserrat";
+  font-weight:600;
+  font-style:normal;
+  line-height:24px;
+  letter-spacing:0.1px;
+  text-decoration:none;
+  text-transform:none;
+}
+@mixin subhead-2 {
+  font-size:14px;
+  font-family:"Montserrat";
+  font-weight:600;
+  font-style:normal;
+  line-height:20px;
+  letter-spacing:0.1px;
+  text-decoration:none;
+  text-transform:none;
+}
+@mixin button {
+  font-size:14px;
+  font-family:"Montserrat";
+  font-weight:600;
+  font-style:normal;
+  line-height:20px;
+  letter-spacing:0.1px;
+  text-decoration:none;
+  text-transform:none;
+}
+@mixin body-1 {
+  font-size:16px;
+  font-family:"Montserrat";
+  font-weight:400;
+  font-style:normal;
+  line-height:24px;
+  letter-spacing:0.5px;
+  text-decoration:none;
+  text-transform:none;
+}
+@mixin body-2 {
+  font-size:14px;
+  font-family:"Montserrat";
+  font-weight:400;
+  font-style:normal;
+  line-height:20px;
+  letter-spacing:0.25px;
+  text-decoration:none;
+  text-transform:none;
+}
+@mixin caption {
+  font-size:12px;
+  font-family:"Montserrat";
+  font-weight:400;
+  font-style:normal;
+  line-height:16px;
+  letter-spacing:0.4px;
+  text-decoration:none;
+  text-transform:none;
+}
+@mixin overline {
+  font-size:12px;
+  font-family:"Montserrat";
+  font-weight:500;
+  font-style:normal;
+  line-height:16px;
+  letter-spacing:0.5px;
+  text-decoration:none;
+  text-transform:none;
+}
+@mixin label-small {
+  font-size:11px;
+  font-family:"Montserrat";
+  font-weight:500;
+  font-style:normal;
+  line-height:16px;
+  letter-spacing:0.5px;
+  text-decoration:none;
+  text-transform:none;
+}
+@mixin display-large {
+  font-size:57px;
+  font-family:"Montserrat";
+  font-weight:700;
+  font-style:normal;
+  line-height:64px;
+  letter-spacing:-0.25px;
+  text-decoration:none;
+  text-transform:none;
+}
+@mixin display-medium {
+  font-size:45px;
+  font-family:"Montserrat";
+  font-weight:700;
+  font-style:normal;
+  line-height:52px;
+  text-decoration:none;
+  text-transform:none;
+}
+@mixin display-small {
+  font-size:36px;
+  font-family:"Montserrat";
+  font-weight:700;
+  font-style:normal;
+  line-height:44px;
+  text-decoration:none;
+  text-transform:none;
+}
+@mixin headline-large {
+  font-size:32px;
+  font-family:"Montserrat";
+  font-weight:600;
+  font-style:normal;
+  line-height:40px;
+  text-decoration:none;
+  text-transform:none;
+}
+@mixin headline-medium {
+  font-size:28px;
+  font-family:"Montserrat";
+  font-weight:600;
+  font-style:normal;
+  line-height:36px;
+  text-decoration:none;
+  text-transform:none;
+}
+@mixin headline-small {
+  font-size:24px;
+  font-family:"Montserrat";
+  font-weight:600;
+  font-style:normal;
+  line-height:32px;
+  text-decoration:none;
+  text-transform:none;
+}
+@mixin title-large {
+  font-size:22px;
+  font-family:"Montserrat";
+  font-weight:600;
+  font-style:normal;
+  line-height:28px;
+  text-decoration:none;
+  text-transform:none;
+}
+@mixin title-medium {
+  font-size:16px;
+  font-family:"Montserrat";
+  font-weight:600;
+  font-style:normal;
+  line-height:24px;
+  letter-spacing:0.1px;
+  text-decoration:none;
+  text-transform:none;
+}
+@mixin title-small {
+  font-size:14px;
+  font-family:"Montserrat";
+  font-weight:600;
+  font-style:normal;
+  line-height:20px;
+  letter-spacing:0.1px;
+  text-decoration:none;
+  text-transform:none;
+}
+@mixin label-large {
+  font-size:14px;
+  font-family:"Montserrat";
+  font-weight:600;
+  font-style:normal;
+  line-height:20px;
+  letter-spacing:0.1px;
+  text-decoration:none;
+  text-transform:none;
+}
+@mixin label-medium {
+  font-size:12px;
+  font-family:"Montserrat";
+  font-weight:600;
+  font-style:normal;
+  line-height:16px;
+  letter-spacing:0.5px;
+  text-decoration:none;
+  text-transform:none;
+}
+@mixin label-small {
+  font-size:11px;
+  font-family:"Montserrat";
+  font-weight:600;
+  font-style:normal;
+  line-height:16px;
+  letter-spacing:0.5px;
+  text-decoration:none;
+  text-transform:none;
+}
+@mixin body-large {
+  font-size:16px;
+  font-family:"Montserrat";
+  font-weight:500;
+  font-style:normal;
+  line-height:24px;
+  letter-spacing:0.5px;
+  text-decoration:none;
+  text-transform:none;
+}
+@mixin body-medium {
+  font-size:14px;
+  font-family:"Montserrat";
+  font-weight:500;
+  font-style:normal;
+  line-height:20px;
+  letter-spacing:0.25px;
+  text-decoration:none;
+  text-transform:none;
+}
+@mixin body-small {
+  font-size:12px;
+  font-family:"Montserrat";
+  font-weight:500;
+  font-style:normal;
+  line-height:16px;
+  letter-spacing:0.4px;
+  text-decoration:none;
+  text-transform:none;
+}

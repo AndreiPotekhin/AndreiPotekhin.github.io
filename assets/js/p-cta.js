@@ -1,14 +1,14 @@
 import anime from './animejs/lib/anime.es.js';
 
-let btnShape = document.querySelectorAll('.btn-shape')
+let btnShape = document.querySelectorAll('.cta-shape')
 
 function animateLine(targetLines, stroke, x, y, r) {
     anime ({
         targets: targetLines,
         strokeWidth: stroke,
-        translateX: anime.stagger(x, {from: 'center', axis: 'x'}),
-        translateY: anime.stagger(y, {from: 'center', axis: 'y'}),
-        rotateZ: anime.stagger(r, {from: 'center', axis: 'x'}),
+        // translateX: anime.stagger(x, {from: 'center', axis: 'x'}),
+        // translateY: anime.stagger(y, {from: 'center', axis: 'y'}),
+        // rotateZ: anime.stagger(r, {from: 'center', axis: 'x'}),
         delay: anime.stagger(5, {from: 'center'}),
     });
 }
@@ -32,9 +32,9 @@ const updateTranslateYStyle = function(el) {
     let matrix = new WebKitCSSMatrix(style.webkitTransform);
     let rate;
     if (el.classList.contains(btnShape)) {
-    rate = 20;
+        rate = 20;
     } else {
-    rate = -10;
+        rate = -10;
     }
     return [matrix.m42, matrix.m42+rate];
 };
@@ -50,52 +50,15 @@ const floating = anime({
     loop: true
 });
 
-$('.btn-wrapper-inner').hover(function() {
+$('.cta-wrapper-inner').hover(function() {
     animateLine(this.querySelectorAll('.line'),100, 5, -5, 3);
-    animateBtnText(this.querySelector('.btn-text'), 1.1, 10);
+    animateBtnText(this.querySelector('.cta-text'), 1.1, 10);
     floating.pause();
 
 }, function() {
     animateLine(this.querySelectorAll('.line'),70, 0, 0, 0);
-    animateBtnText(this.querySelector('.btn-text'), 1.0, 0);
+    animateBtnText(this.querySelector('.cta-text'), 1.0, 0);
     floating.play();
 });
 
 floating.play();
-
-///
-
-
-
-
-
-let buttonEl = document.querySelectorAll('.text-btn-icon');
-
-anime({
-    targets: buttonEl,
-    rotateZ: -15,
-});
-
-$(buttonEl).hover(function() {
-    let duration = 800;
-    let elasticity = 300;
-
-    anime({
-        targets: '.text-btn-icon-shape',
-        scale: [0, 1],
-        rotate: '1turn',
-        duration: duration,
-        elasticity: elasticity
-    });
-}, function() {
-    let duration = 800;
-    let elasticity = 300;
-
-    anime({
-        targets: '.text-btn-icon-shape',
-        scale: [1, 0],
-        rotate: '1.5turn',
-        duration: duration,
-        elasticity: elasticity
-    });
-});
