@@ -44,7 +44,7 @@ const floating = anime({
     translateX: getDefaultTranslateXStyle,
     translateY: updateTranslateYStyle,
     direction: "alternate",
-    easing: "linear",
+    easing: "easeInOutSine",
     duration: 2000,
     autoplay: true,
     loop: true

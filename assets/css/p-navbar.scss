@@ -1,0 +1,169 @@
+@import "tokens";
+
+$navbar-height: 100px;
+$navbar-height-sm: 72px;
+
+// Bootstrap Legacy
+
+.bs-icon {
+  --bs-icon-size: .75rem;
+  display: flex;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  font-size: var(--bs-icon-size);
+  width: calc(var(--bs-icon-size) * 2);
+  height: calc(var(--bs-icon-size) * 2);
+  color: var(--bs-primary);
+}
+
+.bs-icon-xs {
+  --bs-icon-size: 1rem;
+  width: calc(var(--bs-icon-size) * 1.5);
+  height: calc(var(--bs-icon-size) * 1.5);
+}
+
+.bs-icon-sm {
+  --bs-icon-size: 1rem;
+}
+
+.bs-icon-md {
+  --bs-icon-size: 1.5rem;
+}
+
+.bs-icon-lg {
+  --bs-icon-size: 2rem;
+}
+
+.bs-icon-xl {
+  --bs-icon-size: 2.5rem;
+}
+
+.bs-icon.bs-icon-primary {
+  color: var(--bs-white);
+  background: var(--bs-primary);
+}
+
+.bs-icon.bs-icon-primary-light {
+  color: var(--bs-primary);
+  background: rgba(var(--bs-primary-rgb), .2);
+}
+
+.bs-icon.bs-icon-semi-white {
+  color: var(--bs-primary);
+  background: rgba(255, 255, 255, .5);
+}
+
+.bs-icon.bs-icon-rounded {
+  border-radius: .5rem;
+}
+
+.bs-icon.bs-icon-circle {
+  border-radius: 50%;
+}
+
+.bs-icon {
+  --bs-icon-size: .75rem;
+  display: flex;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  font-size: var(--bs-icon-size);
+  width: calc(var(--bs-icon-size) * 2);
+  height: calc(var(--bs-icon-size) * 2);
+  color: var(--bs-primary);
+}
+
+.bs-icon-sm {
+  --bs-icon-size: 1rem;
+}
+
+.bs-icon.bs-icon-primary {
+  color: var(--bs-white);
+  background: var(--bs-primary);
+}
+
+.bs-icon.bs-icon-rounded {
+  border-radius: 0;
+}
+
+// Custom
+
+.navbar {
+  background-color: $sys-dark-primary-container !important;
+  border-radius: 0 !important;
+  color: $sys-dark-on-surface !important;
+  z-index: 8;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: $sys-dark-on-surface;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+  color: $sys-dark-on-surface;
+  cursor: none;
+
+}
+
+.navbar-light .navbar-nav .show > .nav-link,
+.navbar-light .navbar-nav .active > .nav-link,
+.navbar-light .navbar-nav .nav-link.show,
+.navbar-light .navbar-nav .nav-link.active {
+  color: $sys-dark-on-surface;
+}
+
+.nav-item:hover {
+  cursor: none;
+}
+
+.navbar-toggler {
+  border-radius: 0 !important;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(78, 216, 231, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E") !important;
+}
+
+@media (max-width: 767.98px) {
+  .navbar-btn {
+    margin-top: 0.5rem;
+    display: block;
+  }
+}
+
+.brand {
+  margin-right: 1rem !important;
+}
+
+@media (max-width: 575.98px) {
+  .navbar {
+    width: 100vw;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 1rem 0;
+  }
+  .navbar .container {
+    justify-content: center;
+  }
+  .navbar-nav {
+    margin: 1rem auto;
+  }
+  .navbar-brand {
+    display: none !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .navbar {
+    height: $navbar-height;
+  }
+}
+
+@media (min-width: 992px) {
+  .navbar {
+    height: $navbar-height;
+  }
+}

@@ -44,8 +44,8 @@ const floating = anime({
     translateX: getDefaultTranslateXStyle,
     translateY: updateTranslateYStyle,
     direction: "alternate",
-    easing: "linear",
-    duration: 2000,
+    easing: "easeInOutSine",
+    duration: 3000,
     autoplay: true,
     loop: true
 });
@@ -63,27 +63,19 @@ $('.btn-wrapper-inner').hover(function() {
 
 floating.play();
 
-///
+// Text Button
 
+let textBtnHitbox = document.querySelectorAll('.text-btn-hitbox');
+let textBtnShape = document.querySelectorAll('.text-btn-icon-shape');
 
-
-
-
-let buttonEl = document.querySelectorAll('.text-btn-icon');
-
-anime({
-    targets: buttonEl,
-    rotateZ: -15,
-});
-
-$(buttonEl).hover(function() {
+$(textBtnHitbox).hover(function() {
     let duration = 800;
     let elasticity = 300;
 
     anime({
-        targets: '.text-btn-icon-shape',
+        targets: textBtnShape,
         scale: [0, 1],
-        rotate: '1turn',
+        rotate: 345,
         duration: duration,
         elasticity: elasticity
     });
@@ -92,9 +84,9 @@ $(buttonEl).hover(function() {
     let elasticity = 300;
 
     anime({
-        targets: '.text-btn-icon-shape',
+        targets: textBtnShape,
         scale: [1, 0],
-        rotate: '1.5turn',
+        rotate: -15,
         duration: duration,
         elasticity: elasticity
     });

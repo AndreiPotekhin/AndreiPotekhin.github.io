@@ -1,0 +1,55 @@
+:root {
+  --dark-primary: #4ED8E7 !important;
+  --dark-on-primary: #00363C !important;
+  --dark-background: #1C1C16 !important;
+  --dark-sudface: #191C1D !important;
+  --dark-suface1: #1C2527 !important;
+  --dark-surface2: #1D2B2D !important;
+  --dark-surface3: #1F3133 !important;
+  --dark-surface4: #1F3335 !important;
+  --dark-surface5: #203639 !important;
+  --dark-on-surface: #BFC8CA !important;
+  --dark-outline: #BFC8CA !important;
+}
+
+.main-content-wrapper {
+  position: relative;
+}
+
+.particles-canvas {
+  width: 100vw;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background-color: rgb(25, 28, 29);
+}
+.particles-canvas svg {
+  width: 100%;
+  height: 100%;
+}
+.particles-canvas .particles {
+  mix-blend-mode: color-dodge;
+}
+.particles-canvas .particles path {
+  transform-origin: 50% 50%;
+  transform-box: fill-box;
+}
+.particles-canvas .particle {
+  stroke-width: 70;
+  stroke: rgb(25, 28, 29);
+}
+
+@media (max-width: 575.98px) {
+  .particles-canvas {
+    display: none;
+  }
+}
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .particles-canvas {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=p-particles.css.map */
