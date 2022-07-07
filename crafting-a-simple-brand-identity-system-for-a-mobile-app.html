@@ -1,232 +1,266 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>potenusa</title>
+    <title>Andrei Potekhin</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat&amp;display=swap">
-    <link rel="stylesheet" href="assets/css/Articles-Cards.css">
-    <link rel="stylesheet" href="assets/css/cta.compiled.css">
-    <link rel="stylesheet" href="assets/css/Navbar-Right-Links.css">
-    <link rel="stylesheet" href="assets/css/po-blog-page.compiled.css">
-    <link rel="stylesheet" href="assets/css/story-card.css">
-    <link rel="stylesheet" href="assets/css/po-image-wrapper.css">
-    <link rel="stylesheet" href="assets/css/po-navbar.css">
-    <link rel="stylesheet" href="assets/css/po-navbar.compiled.css">
-    <link rel="stylesheet" href="assets/css/po-sections.css">
-    <link rel="stylesheet" href="assets/css/po-tags.compiled.css">
-    <link rel="stylesheet" href="assets/css/po-yt-embed-wrapper.css">
-    <link rel="stylesheet" href="assets/css/styles.compiled.css">
-    <link rel="stylesheet" href="assets/css/tokens.compiled.css">
-<script src="https://cdn.jsdelivr.net/npm/contentful@latest/dist/contentful.browser.min.js"></script>
-
-<script>var exports = {}; // quick fix because 'exports' is not defined in rich-text bundle below</script>
-
-<script src="https://unpkg.com/@contentful/rich-text-html-renderer@12.0.0/dist/rich-text-html-renderer.es5.js" charset="utf-8"></script>
-
-<script type="module" src="https://cdn.jsdelivr.net/npm/@contentful/rich-text-types@15.12.1/dist/index.min.js"></script>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+    <link rel="stylesheet" href="assets/css/p-story-card.css">
+    <link rel="stylesheet" href="assets/css/p-story.css">
+    <link rel="stylesheet" href="assets/css/p-navbar.css">
+    <link rel="stylesheet" href="assets/css/p-sections.css">
+    <link rel="stylesheet" href="assets/css/p-btn.css">
+    <link rel="stylesheet" href="assets/css/p-cta.css">
+    <link rel="stylesheet" href="assets/css/p-cursor.css">
+    <script src="https://cdn.jsdelivr.net/npm/contentful@latest/dist/contentful.browser.min.js"></script>
+    <script> let exports = {}; // quick fix because 'exports' is not defined in rich-text bundle below</script>
+    <script src="https://unpkg.com/@contentful/rich-text-html-renderer@12.0.0/dist/rich-text-html-renderer.es5.js" charset="utf-8"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@contentful/rich-text-types@15.12.1/dist/index.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.12.0/paper-core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/simplex-noise/2.4.0/simplex-noise.min.js"></script>
 </head>
 
 <body>
-    <nav class="navbar navbar-light navbar-expand-md py-3" style="color: var(--dark-on-surface) !important;">
-        <div class="container"><a class="navbar-brand d-flex align-items-center" href="index.html"><span style="color: var(--dark-on-surface);">Andrei Potekhin</span></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-2"><span class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse justify-content-between" id="navcol-2">
-                <ul class="navbar-nav me-auto">
-                    <li class="nav-item"><a class="nav-link active" href="index.html" style="color: var(--dark-on-surface);">Home</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="assets/img/cv.pdf" style="color: var(--dark-on-surface);">Resume</a></li>
-                </ul><a class="btn btn-outline-primary ms-md-2 navbar-btn" role="button" href="mailto:potekhin.work@gmail.com" style="border-color: var(--dark-primary);border-radius: 25px;--bs-body-bg: var(--dark-primary);--bs-primary: #81f3ff;--bs-primary-rgb: 129,243,255;">potekhin.work@gmail.com</a>
-            </div>
-        </div>
-    </nav>
-    <section class="basic-section">
-        <div class="container">
-            <div class="row d-xl-flex justify-content-xl-center">
-                <div class="col-lg-10 offset-lg-1 offset-xl-0 post-content">
-                    <ul class="list-inline d-inline-flex tag-list">
-                        <li class="list-inline-item" style="background: var(--dark-surface5);padding: 5px;padding-top: 5px;padding-right: 10px;padding-bottom: 5px;padding-left: 10px;border-radius: 10px;">branding</li>
-                        <li class="list-inline-item" style="background: var(--dark-surface5);padding: 5px;padding-top: 5px;padding-right: 10px;padding-bottom: 5px;padding-left: 10px;border-radius: 10px;">product design</li>
-                        <li class="list-inline-item" style="background: var(--dark-surface5);padding: 5px;padding-top: 5px;padding-right: 10px;padding-bottom: 5px;padding-left: 10px;border-radius: 10px;">identity system</li>
+    <main>
+        <div class="cursor cursor--small"></div>
+        <canvas class="cursor cursor--canvas" resize></canvas>
+        <nav class="navbar navbar-light navbar-expand-md py-3">
+            <div class="container"><a class="navbar-brand d-flex align-items-center" href="index.html"><span style="color: var(--dark-on-surface);">Andrei Potekhin</span></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-2"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse justify-content-between" id="navcol-2">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="assets/img/cv.pdf">Resume</a></li>
                     </ul>
-                    <h1 class="title" style="margin-bottom: 16px;"><strong>Crafting a simple brand identity system for a mobile app</strong></h1>
-                    <h5 class="description">Exploring the power of reusable identity components and simplifying assets creation with a pattern generator</h5>
-                    <p class="date">Published on May 15</p>
-                    <div class="po-img-wrapper"><img src="assets/img/case-study-one/case-study-one-cover.png"></div>
+                    <a class="text-btn" role="button" href="mailto:potekhin.work@gmail.com"><span class="text-btn-text">potekhin.work@gmail.com</span>
+                        <span class="text-btn-hitbox">
+                            <svg class="text-btn-icon-shape" width="179" height="86" viewBox="0 0 179 86" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.953125 45.3691H173.266M173.266 45.3691L118.431 8.86426M173.266 45.3691L109.943 76.2032" stroke-linejoin="bevel"/>
+                            </svg>
+                        </span>
+                    </a>
                 </div>
             </div>
-            <div class="row d-lg-flex d-xl-flex justify-content-lg-center justify-content-xl-center">
-                <div class="col-lg-10 col-xl-10 col-xxl-12 post-content">
-                    <h2>Background</h2>
-                    <p>Yoosh is my and my brother’s side project. It is an Andoird app that we position as a student messenger on steroids.<br></p>
-                    <p>The project was formerly named Fraktus. Changing the technology stack at some point required rebuilding and republishing the app on Google Play. But it also provided an opportunity to refine its brand. Since I’m responsible for the whole design stack in the project that set me an interesting task: come up with a new name, design a new app icon, and other necessary assets.<br></p>
-                    <h2>Def-the-Reqs: Defining the requirements</h2>
-                    <p>Defining the requirements is the first thing I usually do even before ideation. That helps me roughly imagine the desired outcome already in the beginning and filter out non-relevant ideas during the design process. I defined the requirements for the new identity as follows:<br></p>
-                    <ul>
-                        <li>The name should sound youthful and weird;</li>
-                        <li>Both the app icon and the name should be based on a metaphor or symbolize the core idea of the app in some other implicit way;<br></li>
-                        <li>The identity should be simple.</li>
-                    </ul>
-                    <p>The first requirement about the youthful nature of the name followed from the target audience of our app - students.<br></p>
-                    <p>The second requirement is typically present in all of my naming and logotype works. Perhaps if the project is lacking resources, especially design ones, of its scale is very small, a straightforward name would do the job pretty well. That’s how we get note-taking apps called "notes." But this is not my style, and this is not what I felt that our app should represent. I prefer diving into the creative challenge of crafting non-trivial ideas.<br></p>
-                    <p>And the last requirement was a reminder that there wasn't a need for a comprehensive system. Instead of a 100-page brand book, we needed a set of basic brand assets and a simple graphic system for social media and blog images.<br></p>
-                    <h2>Coming up with a name</h2>
-                    <p>Once the requirements were defined, it was time for ideating. I prefer to start with a name and then proceed to create an icon or logo. Sometimes, the word itself might define the final image (the Apple logo is an apple). Crafting a name first also allows utilizing its letters' geometry in a logo or icon. So, I started gathering name ideas and asking friends for feedback.<br></p>
-                    <p>The main concept of the app at the time was note-taking in messenger. I was looking for words and phrases that would implicitly reflect this. Some of my ideas are compiled in the table below.<br></p>
-                    <div class="po-img-wrapper"><img src="assets/img/case-study-one/yoosh-naming-options.png"></div>
-                    <p>Our note-taking app had to work like a messenger, a tool that everyone is familiar with. So we thought that one of the core values it could offer users was a seamless transition between apps. That's where "seamlez," "seamsalabeam," "seambo," and other similar options came from.<br></p>
-                    <p>In messengers, the text is packaged in so-called message bubbles so tried to play around with the word "bubble." The first ideas, such as "bubble data," were too simple. Then I thought: what are the most common words and concepts associated with bubbles? Answering that question gave me more metaphorical options, such as "soda," "boyle," and "soup."<br></p>
-                    <p>I wasn't satisfied with the options above and kept exploring. One day I came across the mmhmm app, and it was a huge inspiration. Naming an instrument and especially a company with an awkward mumbling sound was a bold and cheeky move. "Mmhmm" fired an "Aha!" reaction in me. I wanted something similar to happen when people would hear our name.<br></p>
-                    <p>After a few more ideas and iterations with my brother, we came up with the word "yoot." Not only did it sound suitably weird, but it had meaning. The message coming into a chat after pressing the airplane button sounded like "yoot" to us.<br></p>
-                    <p>At the next meeting with Heikki Immonen, the head of the business idea development program in which we participated, we presented a new name. Heikki came up with an even better version: "yoosh." And we liked it. Like our previous suggestion, "yoosh" sounded weird and youthful. Its meaning also matched our idea of the sound effect of a sent message. But as a name, it had even more practical potential (which I only found out about later).<br></p>
-                    <p>First, it has one more letter, which means it is more likely to be a free name on social media platforms and the web. Second, adding the ending -er will give us the word "yoosher." This word can be used when referring to a Yoosh user or to name other brand-related products, such as a podcast. I think this feature of the name is very valuable for the whole identity.<br></p>
-                    <p>At this point, through our joint efforts, we managed to come up with an interesting name that fit the requirements. "Yoosh" sounded youthful and weird. The word implicitly symbolized the idea of the app. It was time to focus on the icon.<br></p>
-                    <h2>Crafting the app icon and related assets</h2>
-                    <p>Note: As of this writing, we have made several iterations of the application icon. I will briefly break down two of them: the first one, which has been in use for some time, and the one currently in use.<br></p>
-                    <h3>A donut symmetry</h3>
-                    <p>My development process is rarely divided into clear stages. Even if I wanted to come up with a title first, and then proceed to create a visual series, these processes ran in parallel. I like to see the graphic representation of ideas, they become more real, and this often boosts my inspiration.<br></p>
-                    <p>So, for the moment of choosing "yoosh" as a name, I’ve already had plenty of icon drafts. The most promising of them was a "y" letter array curved into a donut shape.<br></p>
-                    <div class="po-img-wrapper"><img src="assets/img/case-study-one/yoosh-donut-logo.png"></div>
-                    <p>I have to confess that I’m obsessed with the donut shape and even might overuse it in my designs. However, in this case, it was justified (hopefully). The app was supposed to make a user’s flow of taking notes more smooth as it utilizes our natural messaging habits. Our slogan still sounds like “Less hassle, better flow.” By curving the Y-letter into a circle and keeping the spacing between elements in harmony, I ended up with graphics that in my opinion represented the idea pretty well. This icon symbolized the continuous, uninterrupted, and smooth flow. The idea might become more clear when adding a spinning animation.<br></p><div class="po-yt-embed-wrapper">
-<iframe class="po-yt-embed" width="100%" height="100%" src="https://www.youtube-nocookie.com/embed/V8rwAVDl_mI?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
-                    <p>Additionally to the visual cleanness, repetitive elements curved into a circle with equal in-between spacing are practical. For instance, using the Rotate Copies plugin in Figma I’ve managed to set up a simple system that would allow me to quickly generate 8, 16, or 32 -element donuts. Those generated shapes can then be used for crafting social media graphics, posters, and other assets.<br></p><div class="po-yt-embed-wrapper">
-<iframe class="po-yt-embed" width="100%" height="100%" src="https://www.youtube-nocookie.com/embed/9uiVorjdRXE?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
-                    <p>Eventually, we started using this badge. It was used for about eight months. However, there was one thing that bothered us. The icon was too close visually to the Element icon (Element is an open-source messenger based on which we create Yoosh).<br></p>
-                    <p>That was my mistake as a designer. I had seen both icons many times but underestimated how similar they actually were.<br></p>
-                    <div class="po-img-wrapper"><img src="assets/img/case-study-one/yoosh-and-element-logo.png"></div>
-                    <p>To solve this problem, we decided to do a redesign. At that time, the scale of the project was still very small, so we had the luxury of doing a redesign at no cost.<br></p>
-                    <div class="po-callout-block">
-                        <h5><strong>Learning</strong></h5>
-                        <p>Do comprehensive research before starting designing the identity. Surely, the research should include the competitors’ identities and positioning overviews. But it’s also good to cover the visual characteristics of the related libraries, open-source solutions, and other product components.<br></p>
+        </nav>
+        <section class="basic-section story-section">
+            <div class="container">
+                <div class="row d-xl-flex justify-content-xl-center">
+                    <div class="col-lg-10 offset-lg-1 offset-xl-0 post-content">
+                        <ul class="list-inline tag-list">
+                            <li class="list-inline-item">branding</li>
+                            <li class="list-inline-item">product design</li>
+                            <li class="list-inline-item">identity system</li>
+                        </ul>
+                        <h1 class="title" style="margin-bottom: 16px;"><strong>Crafting a simple brand identity system for a mobile app</strong></h1>
+                        <h5 class="description">Exploring the power of reusable identity components and simplifying assets creation with a pattern generator</h5>
+                        <p class="date">Published on May 15</p>
+                        <div class="po-img-wrapper"><img src="assets/img/case-study-one/case-study-one-cover.png"></div>
                     </div>
-                    <h3>A shape with a character (currently in use)</h3>
-                    <p>At the moment of the redesign, our product definition shifted. We wanted to reposition Yoosh as a messenger with project management features build for students. That surely affected my design decisions.<br></p>
-                    <h5><strong>Colors</strong></h5>
-                    <p>I started the redesign process by refining the color palette. The previous primary color, red, was chosen to differentiate Yoosh from other note-taking apps. With the combination of a grey color, that has been usually used for surfaces, it looked minimalistic, serious, and even official.<br></p>
-                    <div class="po-img-wrapper"><img src="assets/img/case-study-one/website-section.png"></div>
-                    <p>It was suitable for our then-vision, but for a student messenger, I wanted something more playful. With the help of&nbsp;<a href="http://coolors.com/" target="_blank">coolors.com</a>, a color palette generator, I ended up with the combination below. It suited the image I wanted to build, I liked it, and it got approved by my brother. So, we took it.<br></p>
-                    <div class="po-img-wrapper"><img src="assets/img/case-study-one/yoosh-color-palette.png"></div>
-                    <h5><strong>Icon</strong></h5>
-                    <div class="po-callout-block">
-                        <h5><strong>Insight</strong><br></h5>
-                        <p>I didn’t understand ultra-simple identities before. Prodcuthunt.com logo is just the letter “P” in a circle. There didn't seem to be any hidden metaphors or symbols in these designs. They felt too simple and shallow for me. But then I realized that the lack of a meaningful layer is the meaning itself. The lack of concern for branding is branding itself.<br></p>
-                        <p>This realization helped me better understand the reasons behind ultra-simple, abstract or strange designs. Phil Libin was told that "All Turtles" was a weird name, so they called a company "mmhmm" to show what's really weird. This is a brilliant example of how a brand is not defined by how it interacts with consumers, but by how the team interacts with its brand.<br></p>
+                </div>
+                <div class="row d-lg-flex d-xl-flex justify-content-lg-center justify-content-xl-center">
+                    <div class="col-lg-10 col-xl-10 col-xxl-12 post-content">
+                        <h2>Background</h2>
+                        <p>Yoosh is my and my brother’s side project. It is an Andoird app that we position as a student messenger on steroids.<br></p>
+                        <p>The project was formerly named Fraktus. Changing the technology stack at some point required rebuilding and republishing the app on Google Play. But it also provided an opportunity to refine its brand. Since I’m responsible for the whole design stack in the project that set me an interesting task: come up with a new name, design a new app icon, and other necessary assets.<br></p>
+                        <h2>Def-the-Reqs: Defining the requirements</h2>
+                        <p>Defining the requirements is the first thing I usually do even before ideation. That helps me roughly imagine the desired outcome already in the beginning and filter out non-relevant ideas during the design process. I defined the requirements for the new identity as follows:<br></p>
+                        <ul>
+                            <li>The name should sound youthful and weird;</li>
+                            <li>Both the app icon and the name should be based on a metaphor or symbolize the core idea of the app in some other implicit way;<br></li>
+                            <li>The identity should be simple.</li>
+                        </ul>
+                        <p>The first requirement about the youthful nature of the name followed from the target audience of our app - students.<br></p>
+                        <p>The second requirement is typically present in all of my naming and logotype works. Perhaps if the project is lacking resources, especially design ones, of its scale is very small, a straightforward name would do the job pretty well. That’s how we get note-taking apps called "notes." But this is not my style, and this is not what I felt that our app should represent. I prefer diving into the creative challenge of crafting non-trivial ideas.<br></p>
+                        <p>And the last requirement was a reminder that there wasn't a need for a comprehensive system. Instead of a 100-page brand book, we needed a set of basic brand assets and a simple graphic system for social media and blog images.<br></p>
+                        <h2>Coming up with a name</h2>
+                        <p>Once the requirements were defined, it was time for ideating. I prefer to start with a name and then proceed to create an icon or logo. Sometimes, the word itself might define the final image (the Apple logo is an apple). Crafting a name first also allows utilizing its letters' geometry in a logo or icon. So, I started gathering name ideas and asking friends for feedback.<br></p>
+                        <p>The main concept of the app at the time was note-taking in messenger. I was looking for words and phrases that would implicitly reflect this. Some of my ideas are compiled in the table below.<br></p>
+                        <div class="po-img-wrapper"><img src="assets/img/case-study-one/yoosh-naming-options.png"></div>
+                        <p>Our note-taking app had to work like a messenger, a tool that everyone is familiar with. So we thought that one of the core values it could offer users was a seamless transition between apps. That's where "seamlez," "seamsalabeam," "seambo," and other similar options came from.<br></p>
+                        <p>In messengers, the text is packaged in so-called message bubbles so tried to play around with the word "bubble." The first ideas, such as "bubble data," were too simple. Then I thought: what are the most common words and concepts associated with bubbles? Answering that question gave me more metaphorical options, such as "soda," "boyle," and "soup."<br></p>
+                        <p>I wasn't satisfied with the options above and kept exploring. One day I came across the mmhmm app, and it was a huge inspiration. Naming an instrument and especially a company with an awkward mumbling sound was a bold and cheeky move. "Mmhmm" fired an "Aha!" reaction in me. I wanted something similar to happen when people would hear our name.<br></p>
+                        <p>After a few more ideas and iterations with my brother, we came up with the word "yoot." Not only did it sound suitably weird, but it had meaning. The message coming into a chat after pressing the airplane button sounded like "yoot" to us.<br></p>
+                        <p>At the next meeting with Heikki Immonen, the head of the business idea development program in which we participated, we presented a new name. Heikki came up with an even better version: "yoosh." And we liked it. Like our previous suggestion, "yoosh" sounded weird and youthful. Its meaning also matched our idea of the sound effect of a sent message. But as a name, it had even more practical potential (which I only found out about later).<br></p>
+                        <p>First, it has one more letter, which means it is more likely to be a free name on social media platforms and the web. Second, adding the ending -er will give us the word "yoosher." This word can be used when referring to a Yoosh user or to name other brand-related products, such as a podcast. I think this feature of the name is very valuable for the whole identity.<br></p>
+                        <p>At this point, through our joint efforts, we managed to come up with an interesting name that fit the requirements. "Yoosh" sounded youthful and weird. The word implicitly symbolized the idea of the app. It was time to focus on the icon.<br></p>
+                        <h2>Crafting the app icon and related assets</h2>
+                        <p>Note: As of this writing, we have made several iterations of the application icon. I will briefly break down two of them: the first one, which has been in use for some time, and the one currently in use.<br></p>
+                        <h3>A donut symmetry</h3>
+                        <p>My development process is rarely divided into clear stages. Even if I wanted to come up with a title first, and then proceed to create a visual series, these processes ran in parallel. I like to see the graphic representation of ideas, they become more real, and this often boosts my inspiration.<br></p>
+                        <p>So, for the moment of choosing "yoosh" as a name, I’ve already had plenty of icon drafts. The most promising of them was a "y" letter array curved into a donut shape.<br></p>
+                        <div class="po-img-wrapper"><img src="assets/img/case-study-one/yoosh-donut-logo.png"></div>
+                        <p>I have to confess that I’m obsessed with the donut shape and even might overuse it in my designs. However, in this case, it was justified (hopefully). The app was supposed to make a user’s flow of taking notes more smooth as it utilizes our natural messaging habits. Our slogan still sounds like “Less hassle, better flow.” By curving the Y-letter into a circle and keeping the spacing between elements in harmony, I ended up with graphics that in my opinion represented the idea pretty well. This icon symbolized the continuous, uninterrupted, and smooth flow. The idea might become more clear when adding a spinning animation.<br></p><div class="po-yt-embed-wrapper">
+    <iframe class="po-yt-embed" width="100%" height="100%" src="https://www.youtube-nocookie.com/embed/V8rwAVDl_mI?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+                        <p>Additionally to the visual cleanness, repetitive elements curved into a circle with equal in-between spacing are practical. For instance, using the Rotate Copies plugin in Figma I’ve managed to set up a simple system that would allow me to quickly generate 8, 16, or 32 -element donuts. Those generated shapes can then be used for crafting social media graphics, posters, and other assets.<br></p><div class="po-yt-embed-wrapper">
+    <iframe class="po-yt-embed" width="100%" height="100%" src="https://www.youtube-nocookie.com/embed/9uiVorjdRXE?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+                        <p>Eventually, we started using this badge. It was used for about eight months. However, there was one thing that bothered us. The icon was too close visually to the Element icon (Element is an open-source messenger based on which we create Yoosh).<br></p>
+                        <p>That was my mistake as a designer. I had seen both icons many times but underestimated how similar they actually were.<br></p>
+                        <div class="po-img-wrapper"><img src="assets/img/case-study-one/yoosh-and-element-logo.png"></div>
+                        <p>To solve this problem, we decided to do a redesign. At that time, the scale of the project was still very small, so we had the luxury of doing a redesign at no cost.<br></p>
+                        <div class="po-callout-block">
+                            <h5><strong>Learning</strong></h5>
+                            <p>Do comprehensive research before starting designing the identity. Surely, the research should include the competitors’ identities and positioning overviews. But it’s also good to cover the visual characteristics of the related libraries, open-source solutions, and other product components.<br></p>
+                        </div>
+                        <h3>A shape with a character (currently in use)</h3>
+                        <p>At the moment of the redesign, our product definition shifted. We wanted to reposition Yoosh as a messenger with project management features build for students. That surely affected my design decisions.<br></p>
+                        <h5><strong>Colors</strong></h5>
+                        <p>I started the redesign process by refining the color palette. The previous primary color, red, was chosen to differentiate Yoosh from other note-taking apps. With the combination of a grey color, that has been usually used for surfaces, it looked minimalistic, serious, and even official.<br></p>
+                        <div class="po-img-wrapper"><img src="assets/img/case-study-one/website-section.png"></div>
+                        <p>It was suitable for our then-vision, but for a student messenger, I wanted something more playful. With the help of&nbsp;<a href="http://coolors.com/" target="_blank">coolors.com</a>, a color palette generator, I ended up with the combination below. It suited the image I wanted to build, I liked it, and it got approved by my brother. So, we took it.<br></p>
+                        <div class="po-img-wrapper"><img src="assets/img/case-study-one/yoosh-color-palette.png"></div>
+                        <h5><strong>Icon</strong></h5>
+                        <div class="po-callout-block">
+                            <h5><strong>Insight</strong><br></h5>
+                            <p>I didn’t understand ultra-simple identities before. Prodcuthunt.com logo is just the letter “P” in a circle. There didn't seem to be any hidden metaphors or symbols in these designs. They felt too simple and shallow for me. But then I realized that the lack of a meaningful layer is the meaning itself. The lack of concern for branding is branding itself.<br></p>
+                            <p>This realization helped me better understand the reasons behind ultra-simple, abstract or strange designs. Phil Libin was told that "All Turtles" was a weird name, so they called a company "mmhmm" to show what's really weird. This is a brilliant example of how a brand is not defined by how it interacts with consumers, but by how the team interacts with its brand.<br></p>
+                        </div>
+                        <p>As a co-creator and user of our app, I felt that a more abstract shape with less attention to the symbolism would much better reflect our vision of a student-centered messenger. It would have been more light-hearted and playful.&nbsp;I started juggling geometric shapes and sending them to my brother to get feedback.<br></p>
+                        <div class="po-img-wrapper"><img src="assets/img/case-study-one/yoosh-new-logo-ideation.png"></div>
+                        <p>We seemed to like this shape the most:<br></p>
+                        <div class="po-img-wrapper"><img src="assets/img/case-study-one/yoosh-new-icon.png"></div>
+                        <p>There is no hidden meaning in this. It is simply the letter "y" constructed from geometric shapes. Simple and abstract enough. In addition, its sharpness and boldness show its cool and playful character, which is suitable for a student messenger. We chose it.<br></p>
+                        <p>Dark blue was chosen as the primary color, so the final icon design looked like this:<br></p>
+                        <div class="po-img-wrapper"><img src="assets/img/case-study-one/yoosh-new-icon-colors.png"></div>
+                        <h3><strong>Extending the asset set utilizing the icon shapes</strong></h3>
+                        <p>I view logos and app icons as fundamental building blocks for other brand assets. I usually try to design them so that their shapes can be used to create graphics for social media, blog posts, and merch. The new icon is no exception. It consists of two basic shapes: a square and a sector.<br></p>
+                        <div class="po-img-wrapper"><img src="assets/img/case-study-one/yoosh-new-icon-shapes.png"></div>
+                        <p>Most of the time I take a logical approach to my projects. But sometimes I trust the process and let randomness help me with unexpected discoveries. Playing with the forms above was one such moment of exploration.<br></p>
+                        <p>Because of its simplicity, this geometry is a super handy building material. I have tried rotating, combining, and subtracting the shapes. After some experimentation, I realized that with some compromises I could build the letters "y," "o," "s,", and "h" and get the word “yoosh”.<br></p>
+                        <div class="po-img-wrapper"><img src="assets/img/case-study-one/yoosh-word.png"></div>
+                        <p>I was very happy with this discovery, but felt even higher satisfaction when, after turning the letter “y”, I got an “r”. It clicked like the last piece of the puzzle revealing the whole picture.<br></p>
+                        <div class="po-img-wrapper"><img src="assets/img/case-study-one/yoosher-word.png"></div>
+                        <p>I believe that the fewer rules a graphic composition has, the stronger and more sustainable it is. This graphic has been built with two types of geometrical figures. It starts and ends with the same shape. So, it is simple, easily adaptive to different assets, and thus, strong.</p>
+                        <div class="po-img-wrapper"><img src="assets/img/case-study-one/yoosher-word-shapes.png"></div>
+                        <div class="po-img-wrapper"><img src="assets/img/case-study-one/yoosh-word-highlights.png"></div>
+                        <h3><strong>Developing a pattern generator to speed up the creation of typical assets</strong><br></h3>
+                        <p>A design might be a result of exploration, but eventually, it serves everyday needs. I wanted to make the process of creating typical content, such as images for social media, more efficient. To do this, I decided to develop a pattern generator.<br></p>
+                        <p>The requirements for the generator were as follows:<br></p>
+                        <ul>
+                            <li>Patterns must be generated using squares and sectors, basic app icon shapes, and a brand color palette;</li>
+                            <li>It must be built with HTML, CSS, and JS (p5.js library) for easy access anywhere (and because those languages are the ones I have at least some experience with);</li>
+                            <li>It should work on a randomization basis because even a super-simple randomization-based model can generate many outcomes and is thus effective in a given context.</li>
+                        </ul>
+                        <p>My programming skills are very humble, but with the help of YouTube tutorials, I’ve managed to build a working model. As it is built with the web tech stack, it was easy to add it to the&nbsp;<a href="http://yoosh.io" target="_blank">yoosh.io</a>&nbsp;Webflow site using HTML-embed.<br></p><div class="po-yt-embed-wrapper">
+    <iframe class="po-yt-embed" width="100%" height="100%" src="https://www.youtube-nocookie.com/embed/G8Gcnr8xDmw?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+                        <p>Here is an example of an actual post, that has been made with the help of the generator.<br></p>
+                        <div class="po-img-wrapper"><img src="assets/img/case-study-one/pattern-example.png"></div>
+                        <p>I am very happy with the result, but have some ideas for future iterations:<br></p>
+                        <ul>
+                            <li>Text area selector for better text readability on final assets;</li>
+                            <li>Size toggle for getting assets with different aspect ratios;</li>
+                            <li>Go to the previous -button;</li>
+                            <li>Turn the generator into Figma plugins for faster access while creating assets (shouldn’t be hard as Figma plugins also work on JS).</li>
+                        </ul>
+                        <h3><strong>Imagining the designed identity with mockups</strong><br></h3>
+                        <p>The word “yoosher” and strong graphics for it forms a good base for the mech products. And having a pattern generator in the arsenal surely makes creating unique print designs very fast.<br></p>
+                        <div class="po-gallery-grid">
+                            <div class="po-gallery-grid-row">
+                                <figure class="figure po-gallery-item" id="po-gallery-item-1"><img class="img-fluid figure-img" src="assets/img/case-study-one/mockup-grid/mockup-grid-01.png"></figure>
+                                <figure class="figure po-gallery-item" id="po-gallery-item-2"><img class="img-fluid figure-img" src="assets/img/case-study-one/mockup-grid/mockup-grid-02.png"></figure>
+                                <figure class="figure po-gallery-item" id="po-gallery-item-3"><img class="img-fluid figure-img" src="assets/img/case-study-one/mockup-grid/mockup-grid-03.png"></figure>
+                            </div>
+                            <div class="po-gallery-grid-row">
+                                <figure class="figure po-gallery-item" id="po-gallery-item-4"><img class="img-fluid figure-img" src="assets/img/case-study-one/mockup-grid/mockup-grid-04.png"></figure>
+                                <figure class="figure po-gallery-item" id="po-gallery-item-5"><img class="img-fluid figure-img" src="assets/img/case-study-one/mockup-grid/mockup-grid-05.png"></figure>
+                            </div>
+                            <div class="po-gallery-grid-row">
+                                <figure class="figure po-gallery-item" id="po-gallery-item-6"><img class="img-fluid figure-img" src="assets/img/case-study-one/mockup-grid/mockup-grid-06.png"></figure>
+                            </div>
+                            <div class="po-gallery-grid-row">
+                                <figure class="figure po-gallery-item" id="po-gallery-item-7"><img class="img-fluid figure-img" src="assets/img/case-study-one/mockup-grid/mockup-grid-07.png"></figure>
+                                <figure class="figure po-gallery-item" id="po-gallery-item-8"><img class="img-fluid figure-img" src="assets/img/case-study-one/mockup-grid/mockup-grid-08.png"></figure>
+                            </div>
+                            <div class="po-gallery-grid-row">
+                                <figure class="figure po-gallery-item" id="po-gallery-item-9"><img class="img-fluid figure-img" src="assets/img/case-study-one/mockup-grid/mockup-grid-09.png"></figure>
+                                <figure class="figure po-gallery-item" id="po-gallery-item-10"><img class="img-fluid figure-img" src="assets/img/case-study-one/mockup-grid/mockup-grid-10.png"></figure>
+                            </div>
+                            <div class="po-gallery-grid-row">
+                                <figure class="figure po-gallery-item" id="po-gallery-item-11"><img class="img-fluid figure-img" src="assets/img/case-study-one/mockup-grid/mockup-grid-11.png"></figure>
+                                <figure class="figure po-gallery-item" id="po-gallery-item-12"><img class="img-fluid figure-img" src="assets/img/case-study-one/mockup-grid/mockup-grid-12.png"></figure>
+                            </div>
+                            <div class="po-gallery-grid-row">
+                                <figure class="figure po-gallery-item" id="po-gallery-item-13"><img class="img-fluid figure-img" src="assets/img/case-study-one/mockup-grid/mockup-grid-13.png"></figure>
+                                <figure class="figure po-gallery-item" id="po-gallery-item-14"><img class="img-fluid figure-img" src="assets/img/case-study-one/mockup-grid/mockup-grid-14.png"></figure>
+                            </div>
+                            <div class="po-gallery-grid-row">
+                                <figure class="figure po-gallery-item" id="po-gallery-item-15"><img class="img-fluid figure-img" src="assets/img/case-study-one/mockup-grid/mockup-grid-15.png"></figure>
+                                <figure class="figure po-gallery-item" id="po-gallery-item-16"><img class="img-fluid figure-img" src="assets/img/case-study-one/mockup-grid/mockup-grid-16.png"></figure>
+                            </div>
+                            <div class="po-gallery-grid-row">
+                                <figure class="figure po-gallery-item" id="po-gallery-item-17"><img class="img-fluid figure-img" src="assets/img/case-study-one/mockup-grid/mockup-grid-17.png"></figure>
+                                <figure class="figure po-gallery-item" id="po-gallery-item-18"><img class="img-fluid figure-img" src="assets/img/case-study-one/mockup-grid/mockup-grid-18.png"></figure>
+                            </div>
+                        </div>
+                        <p>Mockup images by <a href="https://www.rawpixel.com/" target="_blank">rawpixel.com</a></p>
+                        <h3><strong>Conclusion</strong><br></h3>
+                        <p>Yoosh remains a side project. At the moment we’re still testing the idea and iterating. That surely brings certain limitations. For instance, we still haven’t clearly written what is the vision and mission of the project or created detailed customer personas that interact with our brand. These things exist in our chats and meeting notes, but they are not collected in one place.<br></p>
+                        <p>Next time, when creating a simple corporate identity for a project similar to a startup, I would take a slightly different approach. At the very beginning, I would hold a 2-3 hour workshop. The goal of the workshop would be to define the team's values, key goals of the project, its vision, and mission. Creating meaningful visuals is easier when abstract feelings about projects are turned into clear sentences.<br></p>
+                        <p>Side-hustles and early-stage startups hardly need a real brandbook. For them, discussing what fields a logo should have on third-party media channels seems ridiculous. But there should definitely be a single source of truth with basic brand guidelines. The solution I've come up with is a one-page brandbook created on a website after the basic assets are entered (it's a cool product idea!).<br></p>
+                        <p>This challenge also crystallized my understanding of modern brand identity: it should be systematic and reusable. A systematic approach helps to see how brand assets can interact with each other (a "y" used for an app icon can turn into an "r" and form the word "yoosher", which can then be printed on t-shirts). Taking reusability into account helps develop building blocks that can be used to automate asset creation (such as a pattern generator). All of this sparked my interest in programming.<br></p>
                     </div>
-                    <p>As a co-creator and user of our app, I felt that a more abstract shape with less attention to the symbolism would much better reflect our vision of a student-centered messenger. It would have been more light-hearted and playful.&nbsp;I started juggling geometric shapes and sending them to my brother to get feedback.<br></p>
-                    <div class="po-img-wrapper"><img src="assets/img/case-study-one/yoosh-new-logo-ideation.png"></div>
-                    <p>We seemed to like this shape the most:<br></p>
-                    <div class="po-img-wrapper"><img src="assets/img/case-study-one/yoosh-new-icon.png"></div>
-                    <p>There is no hidden meaning in this. It is simply the letter "y" constructed from geometric shapes. Simple and abstract enough. In addition, its sharpness and boldness show its cool and playful character, which is suitable for a student messenger. We chose it.<br></p>
-                    <p>Dark blue was chosen as the primary color, so the final icon design looked like this:<br></p>
-                    <div class="po-img-wrapper"><img src="assets/img/case-study-one/yoosh-new-icon-colors.png"></div>
-                    <h3><strong>Extending the asset set utilizing the icon shapes</strong></h3>
-                    <p>I view logos and app icons as fundamental building blocks for other brand assets. I usually try to design them so that their shapes can be used to create graphics for social media, blog posts, and merch. The new icon is no exception. It consists of two basic shapes: a square and a sector.<br></p>
-                    <div class="po-img-wrapper"><img src="assets/img/case-study-one/yoosh-new-icon-shapes.png"></div>
-                    <p>Most of the time I take a logical approach to my projects. But sometimes I trust the process and let randomness help me with unexpected discoveries. Playing with the forms above was one such moment of exploration.<br></p>
-                    <p>Because of its simplicity, this geometry is a super handy building material. I have tried rotating, combining, and subtracting the shapes. After some experimentation, I realized that with some compromises I could build the letters "y," "o," "s,", and "h" and get the word “yoosh”.<br></p>
-                    <div class="po-img-wrapper"><img src="assets/img/case-study-one/yoosh-word.png"></div>
-                    <p>I was very happy with this discovery, but felt even higher satisfaction when, after turning the letter “y”, I got an “r”. It clicked like the last piece of the puzzle revealing the whole picture.<br></p>
-                    <div class="po-img-wrapper"><img src="assets/img/case-study-one/yoosher-word.png"></div>
-                    <p>I believe that the fewer rules a graphic composition has, the stronger and more sustainable it is. This graphic has been built with two types of geometrical figures. It starts and ends with the same shape. So, it is simple, easily adaptive to different assets, and thus, strong.</p>
-                    <div class="po-img-wrapper"><img src="assets/img/case-study-one/yoosher-word-shapes.png"></div>
-                    <div class="po-img-wrapper"><img src="assets/img/case-study-one/yoosh-word-highlights.png"></div>
-                    <h3><strong>Developing a pattern generator to speed up the creation of typical assets</strong><br></h3>
-                    <p>A design might be a result of exploration, but eventually, it serves everyday needs. I wanted to make the process of creating typical content, such as images for social media, more efficient. To do this, I decided to develop a pattern generator.<br></p>
-                    <p>The requirements for the generator were as follows:<br></p>
-                    <ul>
-                        <li>Patterns must be generated using squares and sectors, basic app icon shapes, and a brand color palette;</li>
-                        <li>It must be built with HTML, CSS, and JS (p5.js library) for easy access anywhere (and because those languages are the ones I have at least some experience with);</li>
-                        <li>It should work on a randomization basis because even a super-simple randomization-based model can generate many outcomes and is thus effective in a given context.</li>
-                    </ul>
-                    <p>My programming skills are very humble, but with the help of YouTube tutorials, I’ve managed to build a working model. As it is built with the web tech stack, it was easy to add it to the&nbsp;<a href="http://yoosh.io" target="_blank">yoosh.io</a>&nbsp;Webflow site using HTML-embed.<br></p><div class="po-yt-embed-wrapper">
-<iframe class="po-yt-embed" width="100%" height="100%" src="https://www.youtube-nocookie.com/embed/G8Gcnr8xDmw?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
-                    <p>Here is an example of an actual post, that has been made with the help of the generator.<br></p>
-                    <div class="po-img-wrapper"><img src="assets/img/case-study-one/pattern-example.png"></div>
-                    <p>I am very happy with the result, but have some ideas for future iterations:<br></p>
-                    <ul>
-                        <li>Text area selector for better text readability on final assets;</li>
-                        <li>Size toggle for getting assets with different aspect ratios;</li>
-                        <li>Go to the previous -button;</li>
-                        <li>Turn the generator into Figma plugins for faster access while creating assets (shouldn’t be hard as Figma plugins also work on JS).</li>
-                    </ul>
-                    <h3><strong>Imagining the designed identity with mockups</strong><br></h3>
-                    <p>The word “yoosher” and strong graphics for it forms a good base for the mech products. And having a pattern generator in the arsenal surely makes creating unique print designs very fast.<br></p>
-                    <div class="po-gallery-grid">
-                        <div class="po-gallery-grid-row">
-                            <figure class="figure po-gallery-item" id="po-gallery-item-1"><img class="img-fluid figure-img" src="assets/img/case-study-one/mockup-grid/mockup-grid-01.png"></figure>
-                            <figure class="figure po-gallery-item" id="po-gallery-item-2"><img class="img-fluid figure-img" src="assets/img/case-study-one/mockup-grid/mockup-grid-02.png"></figure>
-                            <figure class="figure po-gallery-item" id="po-gallery-item-3"><img class="img-fluid figure-img" src="assets/img/case-study-one/mockup-grid/mockup-grid-03.png"></figure>
-                        </div>
-                        <div class="po-gallery-grid-row">
-                            <figure class="figure po-gallery-item" id="po-gallery-item-4"><img class="img-fluid figure-img" src="assets/img/case-study-one/mockup-grid/mockup-grid-04.png"></figure>
-                            <figure class="figure po-gallery-item" id="po-gallery-item-5"><img class="img-fluid figure-img" src="assets/img/case-study-one/mockup-grid/mockup-grid-05.png"></figure>
-                        </div>
-                        <div class="po-gallery-grid-row">
-                            <figure class="figure po-gallery-item" id="po-gallery-item-6"><img class="img-fluid figure-img" src="assets/img/case-study-one/mockup-grid/mockup-grid-06.png"></figure>
-                        </div>
-                        <div class="po-gallery-grid-row">
-                            <figure class="figure po-gallery-item" id="po-gallery-item-7"><img class="img-fluid figure-img" src="assets/img/case-study-one/mockup-grid/mockup-grid-07.png"></figure>
-                            <figure class="figure po-gallery-item" id="po-gallery-item-8"><img class="img-fluid figure-img" src="assets/img/case-study-one/mockup-grid/mockup-grid-08.png"></figure>
-                        </div>
-                        <div class="po-gallery-grid-row">
-                            <figure class="figure po-gallery-item" id="po-gallery-item-9"><img class="img-fluid figure-img" src="assets/img/case-study-one/mockup-grid/mockup-grid-09.png"></figure>
-                            <figure class="figure po-gallery-item" id="po-gallery-item-10"><img class="img-fluid figure-img" src="assets/img/case-study-one/mockup-grid/mockup-grid-10.png"></figure>
-                        </div>
-                        <div class="po-gallery-grid-row">
-                            <figure class="figure po-gallery-item" id="po-gallery-item-11"><img class="img-fluid figure-img" src="assets/img/case-study-one/mockup-grid/mockup-grid-11.png"></figure>
-                            <figure class="figure po-gallery-item" id="po-gallery-item-12"><img class="img-fluid figure-img" src="assets/img/case-study-one/mockup-grid/mockup-grid-12.png"></figure>
-                        </div>
-                        <div class="po-gallery-grid-row">
-                            <figure class="figure po-gallery-item" id="po-gallery-item-13"><img class="img-fluid figure-img" src="assets/img/case-study-one/mockup-grid/mockup-grid-13.png"></figure>
-                            <figure class="figure po-gallery-item" id="po-gallery-item-14"><img class="img-fluid figure-img" src="assets/img/case-study-one/mockup-grid/mockup-grid-14.png"></figure>
-                        </div>
-                        <div class="po-gallery-grid-row">
-                            <figure class="figure po-gallery-item" id="po-gallery-item-15"><img class="img-fluid figure-img" src="assets/img/case-study-one/mockup-grid/mockup-grid-15.png"></figure>
-                            <figure class="figure po-gallery-item" id="po-gallery-item-16"><img class="img-fluid figure-img" src="assets/img/case-study-one/mockup-grid/mockup-grid-16.png"></figure>
-                        </div>
-                        <div class="po-gallery-grid-row">
-                            <figure class="figure po-gallery-item" id="po-gallery-item-17"><img class="img-fluid figure-img" src="assets/img/case-study-one/mockup-grid/mockup-grid-17.png"></figure>
-                            <figure class="figure po-gallery-item" id="po-gallery-item-18"><img class="img-fluid figure-img" src="assets/img/case-study-one/mockup-grid/mockup-grid-18.png"></figure>
+                </div>
+            </div>
+        </section>
+        <section class="cta-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 cta-new">
+                        <div class="cta-wrapper-outer">
+                            <a role="button" class="cta-wrapper-inner" href="mailto:potekhin.work@gmail.com">
+                                <div class="cta-text">
+                                    <h2>Let's work together</h2>
+                                    <h5>potekhin.work@gmail.com</h5>
+                                </div>
+                                <svg class="cta-shape" viewBox="0 0 234 151" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12.166 54.9665L61.6835 10.8467" class="line"></path>
+                                    <path d="M217.746 43.7019L190.992 10.8467" class="line"></path>
+                                    <path d="M217.746 96.5049L123.404 126.309" class="line"></path>
+                                    <path d="M45.4904 127.717L13.8086 104.014" class="line"></path>
+                                    <path d="M13.8086 30.5596L29.0628 120.911" class="line"></path>
+                                    <path d="M195.92 106.361L220.796 18.8257" class="line"></path>
+                                    <path d="M33.0518 23.519L220.796 32.6716" class="line"></path>
+                                    <path d="M138.658 130.064L7.2373 94.627" class="line"></path>
+                                    <path d="M33.0518 92.9842L45.4898 17.1826" class="line"></path>
+                                    <path d="M140.771 13.6626L213.287 62.476" class="line"></path>
+                                    <path d="M197.797 45.5791L156.963 120.911" class="line"></path>
+                                    <path d="M58.3974 102.137L53.9385 29.1514" class="line"></path>
+                                    <path d="M131.617 25.1621L187.706 77.4957" class="line"></path>
+                                    <path d="M147.341 123.258L155.789 43.7017" class="line"></path>
+                                    <path d="M116.363 22.3457L152.035 113.167" class="line"></path>
+                                    <path d="M79.7533 120.911L72.7129 27.2739" class="line"></path>
+                                    <path d="M101.578 32.6719L135.607 116.687" class="line"></path>
+                                    <path d="M89.6104 30.5596L103.222 126.309" class="line"></path>
+                                    <path d="M92.1914 8.03027L125.281 147.43" class="line"></path>
+                                </svg>
+                            </a>
                         </div>
                     </div>
-                    <p>Mockup images by <a href="https://www.rawpixel.com/" target="_blank">rawpixel.com</a></p>
-                    <h3><strong>Conclusion</strong><br></h3>
-                    <p>Yoosh remains a side project. At the moment we’re still testing the idea and iterating. That surely brings certain limitations. For instance, we still haven’t clearly written what is the vision and mission of the project or created detailed customer personas that interact with our brand. These things exist in our chats and meeting notes, but they are not collected in one place.<br></p>
-                    <p>Next time, when creating a simple corporate identity for a project similar to a startup, I would take a slightly different approach. At the very beginning, I would hold a 2-3 hour workshop. The goal of the workshop would be to define the team's values, key goals of the project, its vision, and mission. Creating meaningful visuals is easier when abstract feelings about projects are turned into clear sentences.<br></p>
-                    <p>Side-hustles and early-stage startups hardly need a real brandbook. For them, discussing what fields a logo should have on third-party media channels seems ridiculous. But there should definitely be a single source of truth with basic brand guidelines. The solution I've come up with is a one-page brandbook created on a website after the basic assets are entered (it's a cool product idea!).<br></p>
-                    <p>This challenge also crystallized my understanding of modern brand identity: it should be systematic and reusable. A systematic approach helps to see how brand assets can interact with each other (a "y" used for an app icon can turn into an "r" and form the word "yoosher", which can then be printed on t-shirts). Taking reusability into account helps develop building blocks that can be used to automate asset creation (such as a pattern generator). All of this sparked my interest in programming.<br></p>
                 </div>
             </div>
-        </div>
-    </section>
-    <section class="cta-section basic-section">
-        <div class="container">
-            <div class="row">
-                <div class="col content-wrapper">
-                    <h1>Let's work together</h1>
-                    <div class="btn-wrapper"><button class="btn btn-primary btn-lg" type="button">potekhin.work@gmail.com</button></div>
+        </section>
+        <section style="padding-top: 2rem;padding-bottom: 2rem;">
+            <div class="container">
+                <div class="row">
+                    <div class="col d-flex justify-content-between">
+                        <div class="d-inline-flex flex-row"><a href="index.html" style="margin-right: 1rem;color: var(--dark-on-surface);">Home</a><a href="assets/img/cv.pdf" style="color: var(--dark-on-surface);">Resume</a></div>
+                        <div class="d-inline-flex flex-row"></div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <section style="padding-top: 2rem;padding-bottom: 2rem;">
-        <div class="container">
-            <div class="row">
-                <div class="col d-flex justify-content-between">
-                    <div class="d-inline-flex flex-row"><a href="index.html" style="margin-right: 1rem;color: var(--dark-on-surface);">Home</a><a href="assets/img/cv.pdf" style="color: var(--dark-on-surface);">Resume</a></div>
-                    <div class="d-inline-flex flex-row"></div>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
+    </main>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/cms-config.js"></script>
+    <script type="module" src="assets/js/p-btn.js"></script>
+    <script type="module" src="assets/js/p-cta.js"></script>
+    <script type="module" src="assets/js/p-hero.js"></script>
+    <script type="module" src="assets/js/p-cursor.js"></script>
 </body>
 
 </html>

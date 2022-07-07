@@ -7,24 +7,18 @@
     <title>Andrei Potekhin</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat&amp;display=swap">
-    <link rel="stylesheet" href="assets/css/Articles-Cards.css">
-    <link rel="stylesheet" href="assets/css/cta.compiled.css">
-    <link rel="stylesheet" href="assets/css/Navbar-Right-Links.css">
-    <link rel="stylesheet" href="assets/css/po-blog-page.compiled.css">
-    <link rel="stylesheet" href="assets/css/story-card.css">
-    <link rel="stylesheet" href="assets/css/po-image-wrapper.css">
-    <link rel="stylesheet" href="assets/css/po-navbar.css">
-    <link rel="stylesheet" href="assets/css/po-navbar.compiled.css">
-    <link rel="stylesheet" href="assets/css/po-sections.css">
-    <link rel="stylesheet" href="assets/css/po-tags.compiled.css">
-    <link rel="stylesheet" href="assets/css/po-yt-embed-wrapper.css">
-    <link rel="stylesheet" href="assets/css/styles.compiled.css">
-    <link rel="stylesheet" href="assets/css/tokens.compiled.css">
+    <link rel="stylesheet" href="assets/css/p-story-card.css">
+    <link rel="stylesheet" href="assets/css/p-story.css">
+    <link rel="stylesheet" href="assets/css/p-navbar.css">
+    <link rel="stylesheet" href="assets/css/p-sections.css">
     <link rel="stylesheet" href="assets/css/p-btn.css">
     <link rel="stylesheet" href="assets/css/p-cta.css">
     <link rel="stylesheet" href="assets/css/p-cursor.css">
+    <link rel="stylesheet" href="assets/css/p-particles.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/contentful@latest/dist/contentful.browser.min.js"></script>
-    <script>var exports = {}; // quick fix because 'exports' is not defined in rich-text bundle below</script>
+    <script> let exports = {}; // quick fix because 'exports' is not defined in rich-text bundle below</script>
     <script src="https://unpkg.com/@contentful/rich-text-html-renderer@12.0.0/dist/rich-text-html-renderer.es5.js" charset="utf-8"></script>
     <script type="module" src="https://cdn.jsdelivr.net/npm/@contentful/rich-text-types@15.12.1/dist/index.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
@@ -35,15 +29,15 @@
     <main>
         <div class="cursor cursor--small"></div>
         <canvas class="cursor cursor--canvas" resize></canvas>
-        <nav class="navbar navbar-light navbar-expand-md py-3" style="color: var(--dark-on-surface) !important;">
+        <nav class="navbar navbar-light navbar-expand-md">
             <div class="container"><a class="navbar-brand d-flex align-items-center" href="index.html"><span style="color: var(--dark-on-surface);">Andrei Potekhin</span></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-2"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse justify-content-between" id="navcol-2">
                     <ul class="navbar-nav me-auto">
-                        <li class="nav-item"><a class="nav-link active" href="index.html" style="color: var(--dark-on-surface);">Home</a></li>
-                        <li class="nav-item"><a class="nav-link active" href="assets/img/cv.pdf" style="color: var(--dark-on-surface);">Resume</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="assets/img/cv.pdf">Resume</a></li>
                     </ul>
                     <a class="text-btn" role="button" href="mailto:potekhin.work@gmail.com"><span class="text-btn-text">potekhin.work@gmail.com</span>
-                        <span class="text-btn-icon">
+                        <span class="text-btn-hitbox">
                             <svg class="text-btn-icon-shape" width="179" height="86" viewBox="0 0 179 86" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M0.953125 45.3691H173.266M173.266 45.3691L118.431 8.86426M173.266 45.3691L109.943 76.2032" stroke-linejoin="bevel"/>
                             </svg>
@@ -52,10 +46,10 @@
                 </div>
             </div>
         </nav>
-        <section class="hero-section-2">
+        <section class="hero-section">
             <div class="container">
-                <div class="row d-flex justify-content-center">
-                    <div class="hero-desc col-lg-5 col-md-6 text-center">
+                <div class="row">
+                    <div class="hero-desc col-lg-5 col-md-6">
                         <h1 class="hero-heading">Hi. I'm Andrei.</h1>
                         <p class="hero-text">I'm a business-minded full-stack designer.<br>I've spent the last few years designing and developing my product ideas, such as mobile apps and games. My primary focus has been UX/UI design, but I have also learned about the underlying technologies and business.</p>
                     </div>
@@ -99,9 +93,33 @@
                 </div>
             </div>
         </section>
-        <section class="basic-section">
-            <div class="container-fluid p-0">
-                <div class="overflow-hidden custom-card-wrapper">
+        <div class="main-content-wrapper">
+            <div class="particles-canvas">
+                <svg viewBox="0 0 1652 1259" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g class="particles">
+                        <path d="M591.827 344.009L545.947 458.709" class="particle"></path>
+                        <path d="M1244.73 276.954V344.009" class="particle"></path>
+                        <path d="M1281.79 546.939L1198.86 642.229" class="particle"></path>
+                        <path d="M807.111 232.838L838.874 276.954" class="particle"></path>
+                        <path d="M1601.19 642.229L1617.07 705.755" class="particle"></path>
+                        <path d="M882.99 726.93V628.112" class="particle"></path>
+                        <path d="M999.747 127.547L951.084 14" class="particle"></path>
+                        <path d="M585.487 636.637L538.072 589.222" class="particle"></path>
+                        <path d="M368.375 471.932L359.641 345.907" class="particle"></path>
+                        <path d="M926.129 358.385L872.475 349.65" class="particle"></path>
+                        <path d="M75.1496 630.399L19 596.709" class="particle"></path>
+                        <path d="M523.1 62.6631L592.975 132.538" class="particle"></path>
+                        <path d="M1378.64 1126.56L1424.52 1011.86" class="particle"></path>
+                        <path d="M725.736 1193.61V1126.56" class="particle"></path>
+                        <path d="M688.68 923.625L771.617 828.335" class="particle"></path>
+                        <path d="M1163.36 1237.73L1131.6 1193.61" class="particle"></path>
+                        <path d="M369.284 828.336L353.402 764.81" class="particle"></path>
+                        <path d="M1087.48 743.634V842.453" class="particle"></path>
+                    </g>
+                </svg>
+            </div>
+            <section data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-duration="1000" class="basic-section">
+                <div class="container-fluid p-0">
                     <div class="row g-0 story-card">
                         <div class="story-card-desc col-lg-4 col-md-11 col-sm-12">
                             <div class="story-card-header">
@@ -117,7 +135,7 @@
                             </div>
                             <div class="story-card-footer">
                                 <div class="btn-wrapper-outer">
-                                    <a role="button" class="btn-wrapper-inner" href="crafting-a-simple-brand-identity-system-for-a-mobile-app.html.html">
+                                    <a role="button" class="btn-wrapper-inner" href="crafting-a-simple-brand-identity-system-for-a-mobile-app.html">
                                         <div class="btn-text">View Case Study</div>
                                         <svg class="btn-shape" fill-rule="nonzero" viewBox="0 0 353 158" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path class="line" d="M77.0674 11.1947L33.5391 146.616"/>
@@ -155,159 +173,101 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
-        <section class="basic-section">
-            <div class="container-fluid p-0">
-                <div class="row g-0 story-card">
-                    <div class="story-card-desc col-lg-4 col-md-11 col-sm-12">
-                        <div class="story-card-header">
-                            <ul class="list-inline tag-list">
-                                <li class="list-inline-item">branding</li>
-                                <li class="list-inline-item">product design</li>
-                                <li class="list-inline-item">identity system</li>
-                            </ul>
+            </section>
+            <section data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-duration="1000" class="basic-section">
+                <div class="container-fluid p-0">
+                    <div class="row g-0 story-card">
+                        <div class="story-card-desc col-lg-4 col-md-11 col-sm-12">
+                            <div class="story-card-header">
+                                <ul class="list-inline tag-list">
+                                    <li class="list-inline-item">web design</li>
+                                    <li class="list-inline-item">graphic design</li>
+                                    <li class="list-inline-item">custom code</li>
+                                </ul>
+                            </div>
+                            <div class="story-card-body">
+                                <h2 class="story-card-heading">Making a Webflow Site Flourish With Assets and Code</h2>
+                                <p class="story-card-text">Preparing images and copywriting, developing the site in Webflow, and extending its functionality with custom code</p>
+                            </div>
+                            <div class="story-card-footer">
+                                <div class="btn-wrapper-outer">
+                                    <a role="button" class="btn-wrapper-inner" href="making-a-webflow-site-flourish-with-assets-and-code.html">
+                                        <div class="btn-text">View Case Study</div>
+                                        <svg class="btn-shape" fill-rule="nonzero" viewBox="0 0 353 158" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path class="line" d="M77.0674 11.1947L33.5391 146.616"/>
+                                            <path class="line" d="M99.2891 124.562C112.327 96.9958 137.51 34.9335 133.934 7.21777"/>
+                                            <path class="line" d="M30.6875 118.215C71.2924 98.0986 157.42 58.3131 177.089 60.1013"/>
+                                            <path class="line" d="M130.709 56.7983C162.746 54.1906 229.949 56.3513 242.466 85.8551"/>
+                                            <path class="line" d="M103.888 112.341C135.179 115.321 206.703 115.694 242.466 93.3423"/>
+                                            <path class="line" d="M216.205 75.9482C251.222 74.4582 325.056 70.3604 340.255 65.8901"/>
+                                            <path class="line" d="M269.512 17.9236C271.747 31.3344 274.876 64.6379 269.512 90.5656"/>
+                                            <path class="line" d="M194.075 103.566C239.151 86.0575 332.43 51.7108 344.947 54.393"/>
+                                            <path class="line" d="M294.605 119.533C257.726 116.926 171.45 102.546 121.383 65.8901"/>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
-                        <div class="story-card-body">
-                            <h2 class="story-card-heading">Making a Webflow Site Flourish With Assets and Code</h2>
-                            <p class="story-card-text">Preparing images and copywriting, developing the site in Webflow, and extending its functionality with custom code</p>
+                        <div class="card-media col-lg-7 col-md-11 col-sm-12 order-first order-lg-first order-md-first">
+                            <div class="ratio-setter">
+                                <div class="corners-wrapper">
+                                    <div class="corner-top-right">
+                                        <svg class="corner" width="278" height="375" viewBox="0 0 278 375" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M11.5234 56.6306C74.0221 41.8282 156.257 56.6306 185.862 56.6306C215.467 56.6306 263.164 71.433 185.862 175.05C124.021 257.943 187.507 311.56 226.98 328.008" stroke-width="100"/>
+                                            <path d="M11.5234 56.6306C74.0221 41.8282 156.257 56.6306 185.862 56.6306C215.467 56.6306 263.164 71.433 185.862 175.05C124.021 257.943 187.507 311.56 226.98 328.008" stroke="white" stroke-width="2"/>
+                                        </svg>
+                                    </div>
+                                    <div class="corner-bottom-left">
+                                        <svg class="corner" width="326" height="303" viewBox="0 0 326 303" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M37.1787 34.1394C58.5598 57.7136 98.3614 117.362 86.5195 167.361C71.7172 229.86 81.5854 270.977 147.374 244.662C213.162 218.347 214.807 160.782 308.555 195.321" stroke-width="100"/>
+                                            <path d="M37.1787 34.1394C58.5598 57.7136 98.3614 117.362 86.5195 167.361C71.7172 229.86 81.5854 270.977 147.374 244.662C213.162 218.347 214.807 160.782 308.555 195.321" stroke="white" stroke-width="2"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <img src="assets/img/case-study-two/cover.png">
+                            </div>
                         </div>
-                        <div class="story-card-footer">
-                            <div class="btn-wrapper-outer">
-                                <a role="button" class="btn-wrapper-inner" href="making-a-webflow-site-flourish-with-assets-and-code.html">
-                                    <div class="btn-text">View Case Study</div>
-                                    <svg class="btn-shape" fill-rule="nonzero" viewBox="0 0 353 158" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path class="line" d="M77.0674 11.1947L33.5391 146.616"/>
-                                        <path class="line" d="M99.2891 124.562C112.327 96.9958 137.51 34.9335 133.934 7.21777"/>
-                                        <path class="line" d="M30.6875 118.215C71.2924 98.0986 157.42 58.3131 177.089 60.1013"/>
-                                        <path class="line" d="M130.709 56.7983C162.746 54.1906 229.949 56.3513 242.466 85.8551"/>
-                                        <path class="line" d="M103.888 112.341C135.179 115.321 206.703 115.694 242.466 93.3423"/>
-                                        <path class="line" d="M216.205 75.9482C251.222 74.4582 325.056 70.3604 340.255 65.8901"/>
-                                        <path class="line" d="M269.512 17.9236C271.747 31.3344 274.876 64.6379 269.512 90.5656"/>
-                                        <path class="line" d="M194.075 103.566C239.151 86.0575 332.43 51.7108 344.947 54.393"/>
-                                        <path class="line" d="M294.605 119.533C257.726 116.926 171.45 102.546 121.383 65.8901"/>
+                    </div>
+                </div>
+            </section>
+            <section data-aos="zoom-in" data-aos-anchor-placement="center-bottom" data-aos-duration="1000" class="cta-section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 cta-new">
+                            <div class="cta-wrapper-outer">
+                                <a role="button" class="cta-wrapper-inner" href="mailto:potekhin.work@gmail.com">
+                                    <div class="cta-text">
+                                        <h2>Let's work together</h2>
+                                        <h5>potekhin.work@gmail.com</h5>
+                                    </div>
+                                    <svg class="cta-shape" viewBox="0 0 234 151" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12.166 54.9665L61.6835 10.8467" class="line"></path>
+                                        <path d="M217.746 43.7019L190.992 10.8467" class="line"></path>
+                                        <path d="M217.746 96.5049L123.404 126.309" class="line"></path>
+                                        <path d="M45.4904 127.717L13.8086 104.014" class="line"></path>
+                                        <path d="M13.8086 30.5596L29.0628 120.911" class="line"></path>
+                                        <path d="M195.92 106.361L220.796 18.8257" class="line"></path>
+                                        <path d="M33.0518 23.519L220.796 32.6716" class="line"></path>
+                                        <path d="M138.658 130.064L7.2373 94.627" class="line"></path>
+                                        <path d="M33.0518 92.9842L45.4898 17.1826" class="line"></path>
+                                        <path d="M140.771 13.6626L213.287 62.476" class="line"></path>
+                                        <path d="M197.797 45.5791L156.963 120.911" class="line"></path>
+                                        <path d="M58.3974 102.137L53.9385 29.1514" class="line"></path>
+                                        <path d="M131.617 25.1621L187.706 77.4957" class="line"></path>
+                                        <path d="M147.341 123.258L155.789 43.7017" class="line"></path>
+                                        <path d="M116.363 22.3457L152.035 113.167" class="line"></path>
+                                        <path d="M79.7533 120.911L72.7129 27.2739" class="line"></path>
+                                        <path d="M101.578 32.6719L135.607 116.687" class="line"></path>
+                                        <path d="M89.6104 30.5596L103.222 126.309" class="line"></path>
+                                        <path d="M92.1914 8.03027L125.281 147.43" class="line"></path>
                                     </svg>
                                 </a>
                             </div>
                         </div>
                     </div>
-                    <div class="card-media col-lg-7 col-md-11 col-sm-12 order-first order-lg-first order-md-first">
-                        <div class="ratio-setter">
-                            <div class="corners-wrapper">
-                                <div class="corner-top-right">
-                                    <svg class="corner" width="278" height="375" viewBox="0 0 278 375" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M11.5234 56.6306C74.0221 41.8282 156.257 56.6306 185.862 56.6306C215.467 56.6306 263.164 71.433 185.862 175.05C124.021 257.943 187.507 311.56 226.98 328.008" stroke-width="100"/>
-                                        <path d="M11.5234 56.6306C74.0221 41.8282 156.257 56.6306 185.862 56.6306C215.467 56.6306 263.164 71.433 185.862 175.05C124.021 257.943 187.507 311.56 226.98 328.008" stroke="white" stroke-width="2"/>
-                                    </svg>
-                                </div>
-                                <div class="corner-bottom-left">
-                                    <svg class="corner" width="326" height="303" viewBox="0 0 326 303" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M37.1787 34.1394C58.5598 57.7136 98.3614 117.362 86.5195 167.361C71.7172 229.86 81.5854 270.977 147.374 244.662C213.162 218.347 214.807 160.782 308.555 195.321" stroke-width="100"/>
-                                        <path d="M37.1787 34.1394C58.5598 57.7136 98.3614 117.362 86.5195 167.361C71.7172 229.86 81.5854 270.977 147.374 244.662C213.162 218.347 214.807 160.782 308.555 195.321" stroke="white" stroke-width="2"/>
-                                    </svg>
-                                </div>
-                            </div>
-                            <img src="assets/img/case-study-two/cover.png">
-                        </div>
-                    </div>
                 </div>
-            </div>
-        </section>
-        <section class="basic-section">
-            <div class="container-fluid p-0">
-                <div class="overflow-hidden custom-card-wrapper">
-                    <div class="row g-0 story-card">
-                        <div class="story-card-desc col-lg-4 col-md-11 col-sm-12">
-                            <div class="story-card-header">
-                                <ul class="list-inline tag-list">
-                                    <li class="list-inline-item">branding</li>
-                                    <li class="list-inline-item">product design</li>
-                                    <li class="list-inline-item">identity system</li>
-                                </ul>
-                            </div>
-                            <div class="story-card-body">
-                                <h2 class="story-card-heading">Crafting a simple brand identity system for a mobile app</h2>
-                                <p class="story-card-text">Exploring the power of reusable identity components and simplifying assets creation with a pattern generator</p>
-                            </div>
-                            <div class="story-card-footer">
-                                <div class="btn-wrapper-outer">
-                                    <a role="button" class="btn-wrapper-inner" href="crafting-a-simple-brand-identity-system-for-a-mobile-app.html.html">
-                                        <div class="btn-text">View Case Study</div>
-                                        <svg class="btn-shape" fill-rule="nonzero" viewBox="0 0 353 158" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path class="line" d="M77.0674 11.1947L33.5391 146.616"/>
-                                            <path class="line" d="M99.2891 124.562C112.327 96.9958 137.51 34.9335 133.934 7.21777"/>
-                                            <path class="line" d="M30.6875 118.215C71.2924 98.0986 157.42 58.3131 177.089 60.1013"/>
-                                            <path class="line" d="M130.709 56.7983C162.746 54.1906 229.949 56.3513 242.466 85.8551"/>
-                                            <path class="line" d="M103.888 112.341C135.179 115.321 206.703 115.694 242.466 93.3423"/>
-                                            <path class="line" d="M216.205 75.9482C251.222 74.4582 325.056 70.3604 340.255 65.8901"/>
-                                            <path class="line" d="M269.512 17.9236C271.747 31.3344 274.876 64.6379 269.512 90.5656"/>
-                                            <path class="line" d="M194.075 103.566C239.151 86.0575 332.43 51.7108 344.947 54.393"/>
-                                            <path class="line" d="M294.605 119.533C257.726 116.926 171.45 102.546 121.383 65.8901"/>
-                                        </svg>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card-media col-lg-7 col-md-11 col-sm-12 order-first order-lg-last order-md-first">
-                            <div class="ratio-setter">
-                                <div class="corners-wrapper">
-                                    <div class="corner-top-right">
-                                        <svg class="corner" width="278" height="375" viewBox="0 0 278 375" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M11.5234 56.6306C74.0221 41.8282 156.257 56.6306 185.862 56.6306C215.467 56.6306 263.164 71.433 185.862 175.05C124.021 257.943 187.507 311.56 226.98 328.008" stroke-width="100"/>
-                                            <path d="M11.5234 56.6306C74.0221 41.8282 156.257 56.6306 185.862 56.6306C215.467 56.6306 263.164 71.433 185.862 175.05C124.021 257.943 187.507 311.56 226.98 328.008" stroke="white" stroke-width="2"/>
-                                        </svg>
-                                    </div>
-                                    <div class="corner-bottom-left">
-                                        <svg class="corner" width="326" height="303" viewBox="0 0 326 303" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M37.1787 34.1394C58.5598 57.7136 98.3614 117.362 86.5195 167.361C71.7172 229.86 81.5854 270.977 147.374 244.662C213.162 218.347 214.807 160.782 308.555 195.321" stroke-width="100"/>
-                                            <path d="M37.1787 34.1394C58.5598 57.7136 98.3614 117.362 86.5195 167.361C71.7172 229.86 81.5854 270.977 147.374 244.662C213.162 218.347 214.807 160.782 308.555 195.321" stroke="white" stroke-width="2"/>
-                                        </svg>
-                                    </div>
-                                </div>
-                                <img src="assets/img/case-study-one/case-study-one-cover.png">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="cta-section">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 cta-new">
-                        <div class="cta-wrapper-outer">
-                            <a role="button" class="cta-wrapper-inner" href="mailto:potekhin.work@gmail.com">
-                                <div class="cta-text">
-                                    <h2>Let's work together</h2>
-                                    <h5>potekhin.work@gmail.com</h5>
-                                </div>
-                                <svg class="cta-shape" viewBox="0 0 234 151" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M12.166 54.9665L61.6835 10.8467" class="line"></path>
-                                    <path d="M217.746 43.7019L190.992 10.8467" class="line"></path>
-                                    <path d="M217.746 96.5049L123.404 126.309" class="line"></path>
-                                    <path d="M45.4904 127.717L13.8086 104.014" class="line"></path>
-                                    <path d="M13.8086 30.5596L29.0628 120.911" class="line"></path>
-                                    <path d="M195.92 106.361L220.796 18.8257" class="line"></path>
-                                    <path d="M33.0518 23.519L220.796 32.6716" class="line"></path>
-                                    <path d="M138.658 130.064L7.2373 94.627" class="line"></path>
-                                    <path d="M33.0518 92.9842L45.4898 17.1826" class="line"></path>
-                                    <path d="M140.771 13.6626L213.287 62.476" class="line"></path>
-                                    <path d="M197.797 45.5791L156.963 120.911" class="line"></path>
-                                    <path d="M58.3974 102.137L53.9385 29.1514" class="line"></path>
-                                    <path d="M131.617 25.1621L187.706 77.4957" class="line"></path>
-                                    <path d="M147.341 123.258L155.789 43.7017" class="line"></path>
-                                    <path d="M116.363 22.3457L152.035 113.167" class="line"></path>
-                                    <path d="M79.7533 120.911L72.7129 27.2739" class="line"></path>
-                                    <path d="M101.578 32.6719L135.607 116.687" class="line"></path>
-                                    <path d="M89.6104 30.5596L103.222 126.309" class="line"></path>
-                                    <path d="M92.1914 8.03027L125.281 147.43" class="line"></path>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+            </section>
+        </div>
         <section style="padding-top: 2rem;padding-bottom: 2rem;">
             <div class="container">
                 <div class="row">
@@ -319,13 +279,14 @@
             </div>
         </section>
     </main>
+    <script>AOS.init();</script>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/cms-config.js"></script>
     <script type="module" src="assets/js/p-btn.js"></script>
     <script type="module" src="assets/js/p-cta.js"></script>
     <script type="module" src="assets/js/p-hero.js"></script>
-    <script type="module" src="assets/js/parallax.js"></script>
     <script type="module" src="assets/js/p-cursor.js"></script>
+    <script type="module" src="assets/js/p-particles.js"></script>
 </body>
 </html>
