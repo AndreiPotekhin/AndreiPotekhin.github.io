@@ -1,5 +1,10 @@
 {
   "dependencies": {
     "animejs": "^3.2.1"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.53.0"
   }
 }
