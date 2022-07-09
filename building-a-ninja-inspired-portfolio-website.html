@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat&amp;display=swap">
     <link rel="stylesheet" href="assets/css/index.css">
+    <link href="https://vjs.zencdn.net/7.19.2/video-js.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/contentful@latest/dist/contentful.browser.min.js"></script>
     <script> let exports = {}; // quick fix because 'exports' is not defined in rich-text bundle below</script>
     <script src="https://unpkg.com/@contentful/rich-text-html-renderer@12.0.0/dist/rich-text-html-renderer.es5.js" charset="utf-8"></script>
@@ -74,7 +75,7 @@
                     <img src="assets/img/case-study-three/tokens.png">
                     <h3>Shapes</h3>
                     <p>While experimenting with the site layout in Figma, I accidentally concocted the concept of using several thick lines instead of solid background color. I made a quick prototype of a button to test it.</p>
-                    <video>
+                    <video autoplay loop muted>
                         <source src="assets/img/case-study-three/btn-concept.mp4" type="video/mp4">
                         <source src="assets/img/case-study-three/btn-concept.ogg" type="video/ogg">
                     </video>
@@ -94,13 +95,13 @@
                     <h3>Buttons</h3>
                     <p>The initial idea of the button animation was to shift the lines’ location from the center. After some experimentation, I ended up with a different approach. After the button has hovered, its lines get fatter, the scale of the lines and text increases, and a slight rotation applies to the shape.</p>
                     <p>Steady buttons were missing motion. In order to make the website more vibrant, I added floating animations.</p>
-                    <video>
+                    <video autoplay loop muted>
                         <source src="assets/img/case-study-three/comparison.mp4" type="video/mp4">
                         <source src="assets/img/case-study-three/comparison.mp4" type="video/ogg">
                     </video>
                     <h3>CTA Section</h3>
                     <p>The CTA section plays as a big button and has similar animation.</p>
-                    <video>
+                    <video autoplay loop muted>
                         <source src="assets/img/case-study-three/cta.mp4" type="video/mp4">
                         <source src="assets/img/case-study-three/cta.mp4" type="video/ogg">
                     </video>
@@ -108,7 +109,7 @@
                     <p>In the hero section, I attempted to craft a more interactive welcome experience. The image serves as the main component. I believe that it’s important to include a picture of yourself on the portfolio website as it immediately creates a friendlier experience, shows confidence, and invites visitors to have a dialogue.</p>
                     <p>Often, the less expected an experience is, the more impressive it is. It’s boring to witness a card trick you know how the outcome of. A first-time visitor isn’t aware of the SVG shape background concept. So, the hero section is a perfect place to introduce it by turning the background into a shape. It’s unexpected and thus has a chance to create an engaging experience. After some experimentation, I concocted the animation of a contour line scaling into a shape that works as a background.</p>
                     <p>I find the final animation satisfying and always scroll back and forth a few times when visiting the site. It still has some imperfections I didn’t manage to fix, such as the scaling to a too-small shape in the middle of the animation.</p>
-                    <video>
+                    <video autoplay loop muted>
                         <source src="assets/img/case-study-three/hero.mp4" type="video/mp4">
                         <source src="assets/img/case-study-three/hero.mp4" type="video/ogg">
                     </video>
@@ -182,6 +183,7 @@
 <script type="module" src="assets/js/p-story-video.js"></script>
 <script type="module" src="assets/js/p-hero.js"></script>
 <script type="module" src="assets/js/p-cursor.js"></script>
+<script src="https://vjs.zencdn.net/7.19.2/video.min.js"></script>
 </body>
 
 </html>
