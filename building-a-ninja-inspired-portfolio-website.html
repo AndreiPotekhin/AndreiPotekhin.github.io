@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Andrei Potekhin</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat&amp;display=swap">
+    <link rel="stylesheet" href="assets/css/index.css">
+    <script src="https://cdn.jsdelivr.net/npm/contentful@latest/dist/contentful.browser.min.js"></script>
+    <script> let exports = {}; // quick fix because 'exports' is not defined in rich-text bundle below</script>
+    <script src="https://unpkg.com/@contentful/rich-text-html-renderer@12.0.0/dist/rich-text-html-renderer.es5.js" charset="utf-8"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@contentful/rich-text-types@15.12.1/dist/index.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.12.0/paper-core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/simplex-noise/2.4.0/simplex-noise.min.js"></script>
+</head>
+
+<body>
+<main>
+    <div class="cursor cursor--small"></div>
+    <canvas class="cursor cursor--canvas" resize></canvas>
+    <nav class="navbar navbar-light navbar-expand-md py-3">
+        <div class="container"><a class="navbar-brand d-flex align-items-center" href="index.html"><span style="color: var(--dark-on-surface);">Andrei Potekhin</span></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-2"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse justify-content-between" id="navcol-2">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="assets/img/cv.pdf">Resume</a></li>
+                </ul>
+                <a class="text-btn" role="button" href="mailto:potekhin.work@gmail.com"><span class="text-btn-text">potekhin.work@gmail.com</span>
+                    <span class="text-btn-hitbox">
+                            <svg class="text-btn-icon-shape" width="179" height="86" viewBox="0 0 179 86" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.953125 45.3691H173.266M173.266 45.3691L118.431 8.86426M173.266 45.3691L109.943 76.2032" stroke-linejoin="bevel"/>
+                            </svg>
+                        </span>
+                </a>
+            </div>
+        </div>
+    </nav>
+    <section class="basic-section story-section">
+        <div class="container">
+            <div class="row d-xl-flex justify-content-xl-center story-desc">
+                <div class="col-lg-10 offset-lg-1 offset-xl-0 story-card-lg">
+                    <ul class="list-inline tag-list">
+                        <li class="list-inline-item">wed design</li>
+                        <li class="list-inline-item">HTML/CSS/JS</li>
+                        <li class="list-inline-item">animaiton</li>
+                    </ul>
+                    <h1 class="title" style="margin-bottom: 16px;"><strong>Building a Ninja-Inspired Portfolio Website</strong></h1>
+                    <h5 class="description">Adding vibrancy to a Bootstrap-based website by manipulating SVG shapes with Javascript</h5>
+                    <p class="date">Published on July 9</p>
+                    <img src="assets/img/case-study-three/cover.png">
+                    <ul>
+                        <li>The challenge: Develop a simple but cool portfolio website for showcasing case studies of my design work</li>
+                        <li>Published website: <a href="https://potenusa.me" target="_blank">potenusa.me</a></li>
+                        <li>Open GitHub repo: <a href="https://github.com/potenusa/potenusa.me" target="_blank">Repository</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row d-lg-flex d-xl-flex justify-content-lg-center justify-content-xl-center">
+                <div class="col-lg-10 col-xl-10 col-xxl-12 post-content">
+                    <h2>Background</h2>
+                    <p>There is a huge number of tools, such as Webflow, Wix or God Forbid WordPress that allow building websites almost effortlessly. However, I chose to stick with coding it myself. I’m not a developer, but I have always been interested in the tech that brings my designs to life.</p>
+                    <p>The goal of the project was to build a simple but cool website where I would post the case studies of my design works. The development should be fast, and the costs should be minimal.</p>
+                    <p>For the sake of simplicity, I decided to host the website as a GitHub Page. That also provided an easy way to showcase my still very humble coding abilities.</p>
+                    <h2>Visual Style</h2>
+                    <p>The beauty of a personal website is that it reflects your personality. It, surely, does have to serve visitors a pleasant experience, but the main person you have to satisfy is still you. You are the primary stakeholder of your personal website. That freedom in making the decisions unchains the inner experimenter.</p>
+                    <p>The image I closely relate to is a ninja—a calm, laser-focused, and disciplined creature dressed in black garb that steadfastly performs his tasks. The fundamental mismatch, however, is that I only fight with inconvenient and uncreative design.</p>
+                    <p>I avoided obviously picturing the ninja image using popular elements like shurikens but rather attempted to create the desired feeling with shapes. I used ninjatō-sharp lines and animated them to represent speed and agility.</p>
+                    <h3>Colors</h3>
+                    <p>As the scale of the current iteration of the website is simple, I decided not to spend time configuring the components in the design system. However, I still used the Material 3 system for colors. Their handy plugin allows quickly generating the color system based on the source values. Then using a different plugin, CSSGen, I composed the SCSS file with all color and typography tokens.</p>
+                    <img src="assets/img/case-study-three/color-scheme.png">
+                    <img src="assets/img/case-study-three/tokens.png">
+                    <h3>Shapes</h3>
+                    <p>While experimenting with the site layout in Figma, I accidentally concocted the concept of using several thick lines instead of solid background color. I made a quick prototype of a button to test it.</p>
+                    <video>
+                        <source src="assets/img/case-study-three/btn-concept.mp4" type="video/mp4">
+                        <source src="assets/img/case-study-three/btn-concept.ogg" type="video/ogg">
+                    </video>
+                    <p>I loved the idea.</p>
+                    <ul>
+                        <li>First, sharp overlayed shapes remind me of comic-style visual effects;</li>
+                        <li>Second, the idea seemed original. It reimagines the idea of a background that typically is just a filled rectangle;</li>
+                        <li>Third, I saw wide possibilities for animations. Stroke width can become fatter on scroll or hover. The position, scale, and other parameters of the comprising parts of shapes, such as lines, can also be manipulated.</li>
+                    </ul>
+                    <img src="assets/img/case-study-three/concept.png">
+                    <p>Using the shapes as SVGs seemed to be the most convenient solution. It was easy to create them in Figma and copy-paste them into WebStorm. And more importantly, separate parts of the SVGs can be CSS-styled and JS-animated using classes. For example, we can assign the <code>class=”line”</code> to each line in the shape above and then manipulate its stroke width.</p>
+                    <h2>Implementation</h2>
+                    <p>To make the development faster, I decided to use the Bootstrap library. I had some experience with manually coding it, but his time, I wanted to test a different approach. I tried Bootstrap Studio, a tool that allows drag-and-dropping Bootstrap components and generates the code based on that. The development felt faster at the beginning, but then I bumped into a few pitfalls: not being able to add other media than images and not being able to add other JS libraries. As those things were critical for the project, I switched to manual coding.</p>
+                    <p>In order to animate SVG shapes in the desired way, I needed an additional JS library. The first intention was to use p5.js as I had some experience with it. But then I discovered anime.js and decided to stick with it. Anime.js is a Javascript library that is meant for creating animations. With its help, I could easily manipulate SVG shapes.</p>
+                    <h2>Components</h2>
+                    <p>SVG shapes, consisting of randomly placed lines, are the basis of the potenusa.me visual style. The workflow of creating the shapes was as follows: construct the shape in Figma, copy it as SVG, paste it into the HTML, style it with CSS, and animate it with anime.js.</p>
+                    <h3>Buttons</h3>
+                    <p>The initial idea of the button animation was to shift the lines’ location from the center. After some experimentation, I ended up with a different approach. After the button has hovered, its lines get fatter, the scale of the lines and text increases, and a slight rotation applies to the shape.</p>
+                    <p>Steady buttons were missing motion. In order to make the website more vibrant, I added floating animations.</p>
+                    <video>
+                        <source src="assets/img/case-study-three/comparison.mp4" type="video/mp4">
+                        <source src="assets/img/case-study-three/comparison.mp4" type="video/ogg">
+                    </video>
+                    <h3>CTA Section</h3>
+                    <p>The CTA section plays as a big button and has similar animation.</p>
+                    <video>
+                        <source src="assets/img/case-study-three/cta.mp4" type="video/mp4">
+                        <source src="assets/img/case-study-three/cta.mp4" type="video/ogg">
+                    </video>
+                    <h3>Hero Section</h3>
+                    <p>In the hero section, I attempted to craft a more interactive welcome experience. The image serves as the main component. I believe that it’s important to include a picture of yourself on the portfolio website as it immediately creates a friendlier experience, shows confidence, and invites visitors to have a dialogue.</p>
+                    <p>Often, the less expected an experience is, the more impressive it is. It’s boring to witness a card trick you know how the outcome of. A first-time visitor isn’t aware of the SVG shape background concept. So, the hero section is a perfect place to introduce it by turning the background into a shape. It’s unexpected and thus has a chance to create an engaging experience. After some experimentation, I concocted the animation of a contour line scaling into a shape that works as a background.</p>
+                    <p>I find the final animation satisfying and always scroll back and forth a few times when visiting the site. It still has some imperfections I didn’t manage to fix, such as the scaling to a too-small shape in the middle of the animation.</p>
+                    <video>
+                        <source src="assets/img/case-study-three/hero.mp4" type="video/mp4">
+                        <source src="assets/img/case-study-three/hero.mp4" type="video/ogg">
+                    </video>
+                    <h2>Learnings</h2>
+                    <p>Choosing to code the personal website myself was a good decision. After setting everything up, I ended up with a sandbox where I can try to implement the craziest design ideas of mine while learning more about web design and development. I’ve learned a few things already.</p>
+                    <p>That project enhanced my SCSS managing skills. For example, I learned how to set up a workflow that merges SCSS partials into one CSS file with Gulp. That will make styling significantly easier in future projects.</p>
+                    <p>Hosting on GitHub had big pluses. First, now I know a super-quick way to set up a website with GitHub Pages. Secondly, I learned how to push commits to a repository via the terminal.</p>
+                    <p>I’ve gained more experience in Javascript and got closer to understanding how node_modules work. I believe that being able to operate with p5.js and anime.js libraries is a heavy-duty skill for a web designer, and I’m interested in continuing to master it.</p>
+                    <p>The most unexpected learning of this project is that SVG is a powerful tool I previously neglected. The combination of vector graphics and Javascript can lead to truly impressive web experiences with fairly simple code.</p>
+                    <h2>Next Steps</h2>
+                    <p>I like how the website turned out, but it’s far from perfect. Here are my next steps.</p>
+                    <p>The main itching point in the current iteration is that the HTML is needed to be updated by inserting each component and piece of text manually. The next significant improvement would be setting up a CMS. I’ve already tried to connect it to Contentful, but haven’t succeeded yet.</p>
+                    <p>Another interesting challenge is creating SVGs. Copy-pasting them from Figma to HTML is slow and inconvenient. The solution I think of is to write a simple JS-based SVG engine that would generate shapes based on the dimension of the parent div and would allow to easily anime them.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="cta-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 cta-new">
+                    <div class="cta-wrapper-outer">
+                        <a role="button" class="cta-wrapper-inner" href="mailto:potekhin.work@gmail.com">
+                            <div class="cta-text">
+                                <h2>Let's work together</h2>
+                                <h5>potekhin.work@gmail.com</h5>
+                            </div>
+                            <svg class="cta-shape" viewBox="0 0 234 151" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12.166 54.9665L61.6835 10.8467" class="line"></path>
+                                <path d="M217.746 43.7019L190.992 10.8467" class="line"></path>
+                                <path d="M217.746 96.5049L123.404 126.309" class="line"></path>
+                                <path d="M45.4904 127.717L13.8086 104.014" class="line"></path>
+                                <path d="M13.8086 30.5596L29.0628 120.911" class="line"></path>
+                                <path d="M195.92 106.361L220.796 18.8257" class="line"></path>
+                                <path d="M33.0518 23.519L220.796 32.6716" class="line"></path>
+                                <path d="M138.658 130.064L7.2373 94.627" class="line"></path>
+                                <path d="M33.0518 92.9842L45.4898 17.1826" class="line"></path>
+                                <path d="M140.771 13.6626L213.287 62.476" class="line"></path>
+                                <path d="M197.797 45.5791L156.963 120.911" class="line"></path>
+                                <path d="M58.3974 102.137L53.9385 29.1514" class="line"></path>
+                                <path d="M131.617 25.1621L187.706 77.4957" class="line"></path>
+                                <path d="M147.341 123.258L155.789 43.7017" class="line"></path>
+                                <path d="M116.363 22.3457L152.035 113.167" class="line"></path>
+                                <path d="M79.7533 120.911L72.7129 27.2739" class="line"></path>
+                                <path d="M101.578 32.6719L135.607 116.687" class="line"></path>
+                                <path d="M89.6104 30.5596L103.222 126.309" class="line"></path>
+                                <path d="M92.1914 8.03027L125.281 147.43" class="line"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section style="padding-top: 2rem;padding-bottom: 2rem;">
+        <div class="container">
+            <div class="row">
+                <div class="col d-flex justify-content-between">
+                    <div class="d-inline-flex flex-row"><a href="index.html" style="margin-right: 1rem;color: var(--dark-on-surface);">Home</a><a href="assets/img/cv.pdf" style="color: var(--dark-on-surface);">Resume</a></div>
+                    <div class="d-inline-flex flex-row"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+<script src="assets/js/cms-config.js"></script>
+<script type="module" src="assets/js/p-btn.js"></script>
+<script type="module" src="assets/js/p-cta.js"></script>
+<script type="module" src="assets/js/p-story-video.js"></script>
+<script type="module" src="assets/js/p-hero.js"></script>
+<script type="module" src="assets/js/p-cursor.js"></script>
+</body>
+
+</html>

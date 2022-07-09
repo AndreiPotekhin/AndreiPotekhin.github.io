@@ -8,8 +8,8 @@
 }
 
 .tag-list {
+  @include label-large;
   margin: 0;
-  font-size: 16px;
   display: flex;
   flex-wrap: wrap;
   width: 100%;
@@ -20,17 +20,6 @@
     margin-bottom: 8px;
     background-color: $sys-dark-secondary-container;
     color: $sys-dark-on-secondary-container;
-  }
-}
-
-@media (max-width: 991.98px) {
-  .tag-list {
-    font-size: 12px;
-  }
-}
-@media (max-width: 767.98px) {
-  .tag-list {
-    font-size: 14px;
   }
 }
 

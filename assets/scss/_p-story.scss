@@ -6,6 +6,34 @@
   padding-bottom: 56.25% !important;
 }
 
+.story-desc {
+
+  img {
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+    margin: 1.5rem 0;
+  }
+
+  .title {
+    @include display-small;
+    color: $sys-dark-primary !important;
+    margin: 1rem 0;
+  }
+
+  .description {
+    @include title-large;
+    color: $sys-dark-on-surface !important;
+    margin: 0.25rem 0;
+  }
+
+  .date {
+    @include label-large;
+    margin-top: 1rem;
+  }
+
+}
+
 .cover-img2 {
   object-fit: cover;
   position: absolute;
@@ -13,36 +41,6 @@
   left: 0;
   width: 100%;
   height: 100%;
-}
-
-.post-content .title {
-  margin: 0.25rem 0;
-}
-
-.post-content .description {
-  color: #BFC8CA !important;
-  margin: 0.25rem 0;
-  font-size: 20px;
-  line-height: 1.3;
-}
-
-.post-content .date {
-  margin-top: 1rem;
-}
-
-.post-content h2 {
-  margin-top: 3rem !important;
-  margin-bottom: 0.5rem !important;
-}
-
-.post-content h3 {
-  margin-top: 2rem !important;
-  margin-bottom: 0.5rem !important;
-}
-
-.post-content h2 {
-  margin-top: 2rem !important;
-  margin-bottom: 0.5rem !important;
 }
 
 .post-content .cover-img {
@@ -115,6 +113,58 @@
   position: absolute;
   top: 0;
   border-radius: 0;
+}
+
+.post-content {
+
+  video {
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+    margin: 2rem 0;
+  }
+  img {
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+    margin: 2rem 0;
+  }
+  h2 {
+    @include headline-2;
+    color: $sys-dark-primary !important;
+    margin-top: 3rem !important;
+    margin-bottom: 1rem !important;
+  }
+
+  h3 {
+    @include headline-3;
+    color: $sys-dark-primary !important;
+    margin-top: 2rem !important;
+    margin-bottom: 1rem !important;
+  }
+
+  p {
+    @include body-large;
+    color: $sys-dark-on-surface !important;
+  }
+
+  .title {
+    @include display-small;
+    color: $sys-dark-primary !important;
+    margin: 1rem 0;
+  }
+
+  .description {
+    @include title-large;
+    color: $sys-dark-on-surface !important;
+    margin: 0.25rem 0;
+  }
+
+  .date {
+    @include label-large;
+    margin-top: 1rem;
+  }
+
 }
 
 .po-gallery-grid {
