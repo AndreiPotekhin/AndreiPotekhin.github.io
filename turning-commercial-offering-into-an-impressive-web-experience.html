@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Andrei Potekhin</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat&amp;display=swap">
+    <link rel="stylesheet" href="assets/css/index.css">
+    <link href="https://vjs.zencdn.net/7.19.2/video-js.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/contentful@latest/dist/contentful.browser.min.js"></script>
+    <script> let exports = {}; // quick fix because 'exports' is not defined in rich-text bundle below</script>
+    <script src="https://unpkg.com/@contentful/rich-text-html-renderer@12.0.0/dist/rich-text-html-renderer.es5.js" charset="utf-8"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@contentful/rich-text-types@15.12.1/dist/index.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.12.0/paper-core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/simplex-noise/2.4.0/simplex-noise.min.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@1.5.7/dist/lottie-player.js"></script>
+</head>
+
+<body>
+<main>
+    <div class="cursor cursor--small"></div>
+    <canvas class="cursor cursor--canvas" resize></canvas>
+    <nav class="navbar navbar-light navbar-expand-md py-3">
+        <div class="container"><a class="navbar-brand d-flex align-items-center" href="index.html"><span style="color: var(--dark-on-surface);">Andrei Potekhin</span></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-2"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse justify-content-between" id="navcol-2">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="assets/img/cv.pdf">Resume</a></li>
+                </ul>
+                <a class="text-btn" role="button" href="mailto:potekhin.work@gmail.com"><span class="text-btn-text">potekhin.work@gmail.com</span>
+                    <span class="text-btn-hitbox">
+                            <svg class="text-btn-icon-shape" width="179" height="86" viewBox="0 0 179 86" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.953125 45.3691H173.266M173.266 45.3691L118.431 8.86426M173.266 45.3691L109.943 76.2032" stroke-linejoin="bevel"/>
+                            </svg>
+                        </span>
+                </a>
+            </div>
+        </div>
+    </nav>
+    <section class="basic-section story-section">
+        <div class="container">
+            <div class="row d-xl-flex justify-content-xl-center story-desc">
+                <div class="col-lg-10 offset-lg-1 offset-xl-0 story-card-lg">
+                    <ul class="list-inline tag-list">
+                        <li class="list-inline-item">wed design</li>
+                        <li class="list-inline-item">3D</li>
+                        <li class="list-inline-item">animaiton</li>
+                    </ul>
+                    <h1 class="title">Turning Commercial Offering Into an Impressive Web Experience</h1>
+                    <h5 class="description">Designing a cartoony website in Figma, translating it to Webflow using Client-First Style System, and adding an animated 3D scene</h5>
+                    <p class="date">Published on July 23</p>
+                    <img src="assets/img/case-study-four/cover.png">
+                    <div class="info">
+                        <div class="item">
+                            <h5>The challenge</h5>
+                            <p>Develop an impressive web experience that stands for offering &quot;hot but affordable websites for young entrepreneurs&quot;</p>
+                        </div>
+                        <div class="item">
+                            <h5>Tools</h5>
+                            <ul class="list-inline">
+                                <li class="list-inline-item">Figma</li>
+                                <li class="list-inline-item">Webflow</li>
+                                <li class="list-inline-item">After Effects</li>
+                            </ul>
+                        </div>
+                        <div class="item">
+                            <h5>Frameworks &amp; Libraries</h5>
+                            <ul class="list-inline">
+                                <li class="list-inline-item">Client-First Style System</li>
+                                <li class="list-inline-item">three.js</li>
+                                <li class="list-inline-item">Material 3</li>
+                            </ul>
+                        </div>
+                        <div class="item">
+                            <h5>Published project</h5>
+                            <a href="https://pixelwoof.com/" target="_blank">pixelwoof.com</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row d-lg-flex d-xl-flex justify-content-lg-center justify-content-xl-center">
+                <div class="col-lg-10 col-xl-10 col-xxl-12 story-content">
+                    <h2>Background</h2>
+                    <p>My interest in learning how to create impressive web experiences recently turned into Pixelwoof. Pixelwoof is a creative duo of my friend Jakub, a marketer, and me, a designer. Under that name, we&#39;re offering hot but affordable websites for young entrepreneurs. And we surely needed a cool website ourselves. This case study describes the creation process of pixelwoof.com.</p>
+                    <p>The requirements for this project were as follows:</p>
+                    <ul>
+                        <li>The major purpose of the website is to showcase our design capabilities;</li>
+                        <li>The look and feel should be relatable for young entrepreneurs, the target audience of the website;</li>
+                    </ul>
+                    <h2 id="visual-style">Visual style</h2>
+                    <p>The first step was to convert the inner perception of the future site into a more solid form. I started my exploration by brainstorming ideas and gathering inspirational designs into a FigJam board.</p>
+                    <img src="assets/img/case-study-four/figjam-moodboard-1.png">
+                    <img src="assets/img/case-study-four/figjam-moodboard-2.png">
+                    <p>I was trying to figure out which visual style would match our offering (hot and affordable websites for young entrepreneurs) the best. It should be cheeky, playful, and maybe even slightly aggressive to be able to stand for a bold statement. At first, I thought that neo-brutalism would be perfect for expressing those features. </p>
+                    <img src="assets/img/case-study-four/neo-brutalism.png">
+                    <p>Then I came across an After Effects tutorial explaining how to get a photocopy-looking 3D animation. </p>
+                    <video autoplay loop muted>
+                        <source src="assets/img/case-study-four/ae-tutorial.mp4" type="video/mp4">
+                        <source src="assets/img/case-study-four/ae-tutorial.ogg" type="video/ogg">
+                    </video>
+                    <p>Credits: <a href="https://www.youtube.com/watch?v=rYZa_4OCk78" target="_blank">Grant M. Fletcher</a></p>
+                    <p>The sketchy and cartoony look, illustrated in the tutorial, inspired the visual principles I eventually designed:</p>
+                    <ul>
+                        <li>Cartoony low-poly look. It nicely matches the name Pixelwoof, as it can be associated with the word <em>pixel</em>. Outlining shapes with a thin stroke can help achieve the desired look, as it reminds the hand-drawn figures;</li>
+                        <li>Vibrant colors;</li>
+                        <li>Combining sharp and rounded shapes for the “breaking the rules” feeling;</li>
+                        <li>A font with cheeky geometry. I chose Benzin for headers and universal Montserrat for regular text.</li>
+                    </ul>
+                    <img src="assets/img/case-study-four/style-showcase-1.png">
+                    <img src="assets/img/case-study-four/style-showcase-2.png">
+                    <img src="assets/img/case-study-four/style-showcase-3.png">
+                    <h2 id="the-setup">The setup</h2>
+                    <p>The more I design, the more I value beforehand planning and testing. Having a clear understanding of what and how should be designed and built saves time and makes designing and developing more stable and comfortable.</p>
+                    <p>In short, the setup of this project included a prototype in Figma designed with the Material color system, a build in Webflow constructed according to the <a href="https://www.finsweet.com/client-first/" target="_blank">Client-First guidance by Finsweet</a>, and a custom 3D scene developed with three.js.</p>
+                    <h2 id="prototyping-the-initial-design">Prototyping the initial design</h2>
+                    <p>The Client-First System is a class-based style system for Webflow. Setting up the layout happens by wrapping elements into layout class combinations like <code>.margin-top</code> <code>+</code> <code>.margin-large</code>.</p>
+                    <p>I decided to maintain a similar to Client-First structure in Figma. Yes, that takes extra time while designing and slightly overcomplicates the prototype with unnecessary wrapper layers. But it can save many minutes while transitioning from Figma to Webflow as the layers can be just copy-pasted as classes.</p>
+                    <p>Despite that I was using the system for the first time and didn’t manage to set up the layer structure correctly, I still felt the increase in the design productivity.</p>
+                    <img src="assets/img/case-study-four/structure-comparison.png">
+                    <p>Another useful tool I integrated into the workflow in this project was the Figma Tokens plugin. The plugin allows storing and reusing pretty much all styling properties: colors, typography, and borders. I’ve added the Client-First classes into the plugin, so I was able to apply them to the prototype components in one click. Combining tokens is not available on the free plan that I was on, but it still did a great job speeding up the styling.</p>
+                    <p>The Client-First system and the Figma Tokens plugin are super powerful when tangoing together. Styling components with the system&#39;s classes and class combinations happens in a few clicks and results in a 100% Webflow-ready structure.</p>
+                    <img src="assets/img/case-study-four/final-prototype.png">
+                    <div class="p-callout-block">
+                        <h4>Learning</h4>
+                        <p>Webflow doesn’t have a built-in color tokens import functionality. That causes challenges when it&#39;s needed to import a whole Material color system with 300+ items.</p>
+                        <p>For this build, I even tried exporting generated Material color tokens from Figma in .json and turning them into CSS classes. The idea was that I could use them instead of variables. Thus, <code>$light-primary</code> would become <code>.bg-light-primary</code>. That didn’t work out, as it would generate a mess of way too many classes in Webflow, especially paired with the class-based Client-First system.</p>
+                        <p>Luckily, I found a much more elegant solution. Using the combination of a Figma plugin and a browser extension by Flowbase, color tokens can be easily imported into Webflow as native swatches. Awesome finding!</p>
+                        <img src="assets/img/case-study-four/tokens-workflow.png">
+                    </div>
+                    <h2 id="developing-the-site-in-webflow">Developing the site in Webflow</h2>
+                    <p>With the Client-First system and imported color tokens, I built the structure of the site to match the prototype. During this project, I realized that the more time you spend preparing the prototype for translating into the build, the less the translation takes.</p>
+                    <h3 id="adding-the-3d-scene">Adding the 3D scene</h3>
+                    <p>The most impressive element of the site is surely the 3D scene with a scroll-based animation. It was inspired by the After Effects video tutorial mentioned at the beginning. But it&#39;s one thing to come up with a concept, and quite another to create one. Especially with modest programming skills like mine.</p>
+                    <p>First, I explored ways of building the scene with the p5.js library. It does allow manipulating 3D objects and even applying textures to them. However, to create a cartoon look of a scene, I felt that I needed a more powerful tool.</p>
+                    <video autoplay loop muted>
+                        <source src="assets/img/case-study-four/p5js-scene.mp4" type="video/mp4">
+                        <source src="assets/img/case-study-four/p5js-scene.ogg" type="video/ogg">
+                    </video>
+                    <p>From my previous experience of working in a 3D environment, I was familiar with the structure of a scene: a mesh with textures, lights, and a camera. I also knew about shaders, which can be applied to the whole scene for creating desired effects. With its shader support, the three.js library looked very promising, and I decided to stick to it.</p>
+                    <p>I experimented with loading 3D models into the scene but eventually decided to use a simpler shape that can be created with math without loading any models. I was happy to find awesome cartoon shaders on ShaderFrog, but I didn&#39;t manage to get them to work properly. Luckily a default three.js <code>MeshToonMaterial</code> was looking close to what I wanted.</p>
+                    <img src="assets/img/case-study-four/shaders.png">
+                    <p>After some googling for applicable code snippets and troublesome struggling to implement them, I set up the animations. Continuous floating feels like breathing, bringing life to the site. And scroll-dependent rotation and scaling create an engaging and immersive experience.</p>
+                    <video autoplay loop muted>
+                        <source src="assets/img/case-study-four/threejs-scene.mp4" type="video/mp4">
+                        <source src="assets/img/case-study-four/threejs-scene.ogg" type="video/ogg">
+                    </video>
+                    <p>Once the animation was working in an isolated environment, it can be integrated into the build. I found an interesting implementation method: deploying the experience to Netlify via Github pages and embedding it to Webflow as an <code>iframe</code>. It was mostly working but changing <code>z-index</code>, to move the scene behind the main content, was breaking the scroll animation. After spending several hours unsuccessfully trying to fix the bug, I decided to add the whole code to the Webflow.</p>
+                    <h3 id="adding-lottie-animaitons">Adding Lottie animaitons</h3>
+                    <p>Emojis are part of the visual system of the site. They add playfulness and amusingness. Still emojis work fine, but to add more movement I used Lottie animations. I chose the most suitable assets from the free Lottifiles collection and imported them.</p>
+                    <p>Webflow supports Lotties natively, so adding an animation to the CTA component was pretty straightforward.</p>
+                    <video autoplay loop muted>
+                        <source src="assets/img/case-study-four/cta-component.mp4" type="video/mp4">
+                        <source src="assets/img/case-study-four/cta-component.ogg" type="video/ogg">
+                    </video>
+                    <p>Injecting emojis into the hero heading was more challenging. Coding myself I would probably proceed with the <code>&lt;h1&gt;We build h&lt;span&gt;&lt;lottie-player&gt;&lt;/lottie-player&gt;&lt;/span&gt;t and…&lt;/h1&gt;</code> structure. But Webflow doesn’t allow to add other than text spans in the text blocks, meaning that the <code>lottie-player</code> can’t be placed into the <code>h1</code>.</p>
+                    <p>The workaround I found for this challenge was to use the allowed text spans as position setters for the animations. So, while the page is loading the header Lotties are chilling in the top left corner. Once it’s fully loaded jQuery snippet lands them to the allowed text spans’ positions. Voila!</p>
+                    <img src="assets/img/case-study-four/lottie-positioning.png">
+                    <p>As there is a 3D scene on the site, it might take a few moments to load. To make those moments less boring, I created a cute preload animation from the Pixelwoof logo in After Effects and added it as a Lottie.</p>
+                    <video autoplay loop muted>
+                        <source src="assets/img/case-study-four/preloader.mp4" type="video/mp4">
+                        <source src="assets/img/case-study-four/preloader.mp4" type="video/ogg">
+                    </video>
+                    <h2 id="next-steps">Next steps</h2>
+                    <p>One of my biggest design-related insights recently was that you can always improve it later. The most important thing is to ship at least something. Thus, the current build isn’t perfect, and here are some ideas of how to improve it in the next iterations:</p>
+                    <ul>
+                        <li>Developing a more appealing contact page. The primary button now leads to a Google Form which is not that credible;</li>
+                        <li>Wrapping the portfolio project item into the Webflow CMS collection. It’s not urgent yet as there currently are only three projects, but as the list goes bigger it will be a must-have;</li>
+                        <li>Expanding the page structure of the site. All content now is located on the main page. I believe it would be useful to have a separate “how we work” page and a project description page for every portfolio item.</li>
+                    </ul>
+                    <h2 id="conclusion">Conclusion</h2>
+                    <p>There were several challenges in this project. Most of them I overcame, and some forced me to compromise. But they all contributed to improving my web design skills.</p>
+                    <p>Brainstorming the visual style is always one of the most exciting parts of a project. Translating the commercial offering into shapes, colors, and movement is fun. I believe the eventual style is appealing to the target audience of the site. Plus, the 3D experience showcases our design capabilities. That means that the final result matches the set requirements.</p>
+                    <p>I tested Finsweet’s Client-First Style System. It might require a few more tries to fully understand it, but it’s undoubtedly made the building process clear and consistent. Maintaining the system’s naming and layout principles at the prototype stage blurs the line between Figma and Webflow and makes the transition copypastingly fast.</p>
+                    <p>During the project, I also enhanced my design-driven programming skills. Adding a 3D scene with three.js and creating a workaround for Lottie animation helped me understand Javascript better. The more I learn programming the more opportunities I see for crafting thrilling web experiences.</p>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="cta-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 cta-new">
+                    <div class="cta-wrapper-outer">
+                        <a role="button" class="cta-wrapper-inner" href="mailto:potekhin.work@gmail.com">
+                            <div class="cta-text">
+                                <h2>Let's work together</h2>
+                                <h5>potekhin.work@gmail.com</h5>
+                            </div>
+                            <svg class="cta-shape" viewBox="0 0 234 151" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12.166 54.9665L61.6835 10.8467" class="line"></path>
+                                <path d="M217.746 43.7019L190.992 10.8467" class="line"></path>
+                                <path d="M217.746 96.5049L123.404 126.309" class="line"></path>
+                                <path d="M45.4904 127.717L13.8086 104.014" class="line"></path>
+                                <path d="M13.8086 30.5596L29.0628 120.911" class="line"></path>
+                                <path d="M195.92 106.361L220.796 18.8257" class="line"></path>
+                                <path d="M33.0518 23.519L220.796 32.6716" class="line"></path>
+                                <path d="M138.658 130.064L7.2373 94.627" class="line"></path>
+                                <path d="M33.0518 92.9842L45.4898 17.1826" class="line"></path>
+                                <path d="M140.771 13.6626L213.287 62.476" class="line"></path>
+                                <path d="M197.797 45.5791L156.963 120.911" class="line"></path>
+                                <path d="M58.3974 102.137L53.9385 29.1514" class="line"></path>
+                                <path d="M131.617 25.1621L187.706 77.4957" class="line"></path>
+                                <path d="M147.341 123.258L155.789 43.7017" class="line"></path>
+                                <path d="M116.363 22.3457L152.035 113.167" class="line"></path>
+                                <path d="M79.7533 120.911L72.7129 27.2739" class="line"></path>
+                                <path d="M101.578 32.6719L135.607 116.687" class="line"></path>
+                                <path d="M89.6104 30.5596L103.222 126.309" class="line"></path>
+                                <path d="M92.1914 8.03027L125.281 147.43" class="line"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section style="padding-top: 2rem;padding-bottom: 2rem;">
+        <div class="container">
+            <div class="row">
+                <div class="col d-flex justify-content-between">
+                    <div class="d-inline-flex flex-row"><a href="index.html" style="margin-right: 1rem;color: var(--dark-on-surface);">Home</a><a href="assets/img/cv.pdf" style="color: var(--dark-on-surface);">Resume</a></div>
+                    <div class="d-inline-flex flex-row"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+<script src="assets/js/cms-config.js"></script>
+<script type="module" src="assets/js/p-btn.js"></script>
+<script type="module" src="assets/js/p-cta.js"></script>
+<script type="module" src="assets/js/p-story-video.js"></script>
+<script type="module" src="assets/js/p-hero.js"></script>
+<script type="module" src="assets/js/p-cursor.js"></script>
+<script src="https://vjs.zencdn.net/7.19.2/video.min.js"></script>
+</body>
+
+</html>

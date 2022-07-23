@@ -641,6 +641,77 @@ body {
   text-transform: none;
   margin-top: 1rem;
 }
+.story-desc .info {
+  padding: 2rem;
+  margin: 0;
+  display: grid;
+  grid-template-rows: auto auto;
+  row-gap: 2rem;
+  background-color: rgba(78, 216, 231, 0.11);
+}
+.story-desc .info .item {
+  width: 100%;
+  display: grid;
+}
+@media (max-width: 575.98px) {
+  .story-desc .info .item {
+    grid-template-rows: auto auto;
+    row-gap: 1rem;
+  }
+}
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .story-desc .info .item {
+    grid-template-rows: auto auto;
+    row-gap: 1rem;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .story-desc .info .item {
+    grid-template-columns: 15rem 1fr;
+    column-gap: 2rem;
+  }
+}
+@media (min-width: 992px) {
+  .story-desc .info .item {
+    grid-template-columns: 15rem 1fr;
+    column-gap: 2rem;
+  }
+}
+.story-desc .info .item p {
+  margin: 0;
+  padding: 0;
+}
+.story-desc .info .item h5 {
+  margin: 0;
+}
+.story-desc .info .item ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.story-desc .info .item ul li {
+  margin-right: 0.5rem;
+  padding: 0.5rem;
+  background-color: rgb(51, 75, 78);
+  color: rgb(205, 231, 235);
+}
+@media (max-width: 575.98px) {
+  .story-desc .info .item ul li {
+    margin-bottom: 0.5rem;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .story-desc .info .item ul li {
+    margin-bottom: 0;
+  }
+}
+@media (min-width: 992px) {
+  .story-desc .info .item ul li {
+    margin-bottom: 0 !important;
+  }
+}
 
 .cover-img2 {
   object-fit: cover;
@@ -651,27 +722,12 @@ body {
   height: 100%;
 }
 
-.post-content .cover-img {
+.story-content .cover-img {
   width: 100%;
   height: 500px;
   object-fit: cover;
   padding: 2rem 0;
   border-radius: 0;
-}
-
-.post-content .po-callout-block {
-  background-color: rgba(78, 216, 231, 0.11);
-  padding: 2rem;
-  margin: 2rem 0;
-  border-radius: 0;
-}
-
-.post-content .po-callout-block h5 {
-  margin-bottom: 1rem;
-}
-
-.post-content .po-callout-block p:last-child {
-  margin-bottom: 0;
 }
 
 .po-img-wrapper {
@@ -711,7 +767,7 @@ body {
   border-radius: 0;
 }
 
-.post-content .po-yt-embed-wrapper {
+.story-content .po-yt-embed-wrapper {
   margin: 2rem 0;
   position: relative;
   width: 100%;
@@ -719,25 +775,25 @@ body {
   /*16: 9 Aspect Ratio;*/
 }
 
-.post-content .po-yt-embed {
+.story-content .po-yt-embed {
   position: absolute;
   top: 0;
   border-radius: 0;
 }
 
-.post-content video {
+.story-content video {
   width: 100%;
   height: auto;
   max-height: 100%;
   margin: 2rem 0;
 }
-.post-content img {
+.story-content img {
   width: 100%;
   height: auto;
   max-height: 100%;
   margin: 2rem 0;
 }
-.post-content h2 {
+.story-content h2 {
   font-size: 32px;
   font-family: "Montserrat";
   font-weight: 700;
@@ -749,7 +805,7 @@ body {
   margin-top: 3rem !important;
   margin-bottom: 1rem !important;
 }
-.post-content h3 {
+.story-content h3 {
   font-size: 28px;
   font-family: "Montserrat";
   font-weight: 600;
@@ -761,7 +817,7 @@ body {
   margin-top: 2rem !important;
   margin-bottom: 1rem !important;
 }
-.post-content p {
+.story-content p {
   font-size: 16px;
   font-family: "Montserrat";
   font-weight: 500;
@@ -772,7 +828,12 @@ body {
   text-transform: none;
   color: rgb(224, 227, 227) !important;
 }
-.post-content .title {
+.story-content code {
+  padding: 0.25rem;
+  background-color: rgb(57, 70, 100) !important;
+  color: rgb(215, 226, 255) !important;
+}
+.story-content .title {
   font-size: 36px;
   font-family: "Montserrat";
   font-weight: 700;
@@ -783,7 +844,7 @@ body {
   color: rgb(78, 216, 231) !important;
   margin: 1rem 0;
 }
-.post-content .description {
+.story-content .description {
   font-size: 22px;
   font-family: "Montserrat";
   font-weight: 600;
@@ -794,7 +855,7 @@ body {
   color: rgb(224, 227, 227) !important;
   margin: 0.25rem 0;
 }
-.post-content .date {
+.story-content .date {
   font-size: 14px;
   font-family: "Montserrat";
   font-weight: 600;
@@ -804,6 +865,29 @@ body {
   text-decoration: none;
   text-transform: none;
   margin-top: 1rem;
+}
+.story-content .p-callout-block {
+  background-color: rgba(78, 216, 231, 0.11);
+  padding: 2rem;
+  margin: 2rem 0;
+  border-radius: 0;
+}
+.story-content .p-callout-block h4 {
+  font-size: 24px;
+  font-family: "Montserrat";
+  font-weight: 600;
+  font-style: normal;
+  line-height: 32px;
+  text-decoration: none;
+  text-transform: none;
+  color: rgb(78, 216, 231) !important;
+  margin-bottom: 1rem;
+}
+.story-content .p-callout-block p:last-child {
+  margin-bottom: 0;
+}
+.story-content .p-callout-block img {
+  margin-bottom: 0;
 }
 
 .po-gallery-grid {

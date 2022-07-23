@@ -1,4 +1,4 @@
-let vids = document.querySelectorAll('.post-content video'), i;
+let vids = document.querySelectorAll('.story-content video'), i;
 
 for (i = 0; i < vids.length; ++i) {
     vids[i].autoplay = true;
